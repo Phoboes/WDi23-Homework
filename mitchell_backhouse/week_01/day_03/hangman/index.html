@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="output">
+    <h1>Hangman</h1> 
+    <input id="guess" placeholder="Enter a letter to check" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter a letter to check'">
+    <button onclick="guessLetter()" id="guessButton">Check Letter</button>
+    <div id="word"></div>
+  </div>  
+  <p>If you use your imagination, this is awesome!</p>
+  <script src='hangman.js'></script>
+</body>
+</html>
