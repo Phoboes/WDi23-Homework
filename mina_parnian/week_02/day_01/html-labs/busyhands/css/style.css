@@ -1,0 +1,166 @@
+body {
+
+	background-color: rgb(0,0,0);
+	margin: 0 auto;
+}
+
+#container {
+	width: 850;
+	margin: 0 auto;
+}
+
+
+/*nav--------------------------------------------------------------*/
+
+nav {
+	height: 50px;
+    width: 100%;
+	display: block;
+	margin-left: 92px;
+}
+
+
+nav ul li {
+	display: inline;
+	padding: 20px;
+
+}
+
+nav li a {
+	display: inline;
+	color: lightgrey;
+	text-decoration: none;
+}
+/*main--------------------------------------------------------------------*/
+
+
+.backImg {
+
+	height: 1020px;
+	width: 100%;
+	margin: 0 auto;
+	border: 2px solid white;
+
+}
+
+.logo {
+
+	width: 250px;
+	height: 80px;
+	position: absolute;
+	top: 100px;
+	left: 143px;
+}
+
+.imageshadow {
+	position: absolute;
+	top: 570px;
+	left: 150px;
+	
+}
+
+.photobanner {
+	position: absolute;
+	top: 200px;
+	margin: 0 150px;
+	
+}
+
+
+#photocolumn1 {
+	width: 280px;
+	height: 100px;
+	display: inline-block;
+	position: absolute;
+	bottom: -120px;
+	left: 150px;
+}
+
+#photocolumn2 {
+	width: 280px;
+	height: 100px;
+	display: inline-block;
+	position: absolute;
+	bottom: -120px;
+	left: 490px;
+}
+
+#photocolumn3 {
+	width: 280px;
+	height: 100px;
+	display: inline-block;
+	position: absolute;
+	bottom: -120px;
+	left: 832px;
+}
+
+#Quote {
+
+	width: 900px;
+	height: 30px;
+	background-color: rgba(255, 255, 255 , .0);
+	padding: 30px;
+	position: absolute;
+	top: 620px;
+	left: 150px;
+	border: 1px solid white;
+
+}
+
+.button {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+a {
+	text-decoration: none;
+}
+
+
+/*social Media-------------------------------------------------------------*/
+
+#socialMedia {
+	position: absolute;
+	top: 100px;
+	left: 827px;
+
+}
+
+
+
+
+#socialMedia ul li{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999em; /*ask the meaning*/
+
+
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -64px 64px;
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px;
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px;
+}
+
+
+/*footer ----------------------------------------------------------------*/
+
+#footer {
+	background-color: black;
+	width: 100%;
+	height: 300px;
+}
+
+
