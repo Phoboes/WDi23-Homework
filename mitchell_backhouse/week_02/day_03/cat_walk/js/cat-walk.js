@@ -187,3 +187,6 @@ console.log(window.innerWidth);
 
 
 forwardHalf();
+
+// starfield - https://codepen.io/keithclark/pen/zqcEd
+// rainbow gradient - https://codepen.io/nohoid/pen/kIfto 
