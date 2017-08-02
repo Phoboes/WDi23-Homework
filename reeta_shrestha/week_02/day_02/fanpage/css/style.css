@@ -1,0 +1,121 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+wrapper {
+  width: 1000px;
+  display: block;
+  margin: 40px auto;
+}
+
+nav {
+  text-align: right;
+}
+
+nav li:first-child::before {
+  font-family: 'FontAwesome';
+  content: '\f002';
+  margin: 20px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+}
+
+container {
+  display: flex;
+}
+
+container img {
+  width: 100%;
+}
+
+.main-image, aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-image {
+  width: 50%;
+}
+
+aside {
+  width: 50%;
+}
+
+heading {
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.div {
+
+}
+
+heading-rotate {
+  transform: rotate3d(0, 0, 1, 90deg) translate3d(50%, 0, 0);
+  /*transform-origin: left;*/
+  position: absolute;
+  font-size: 2em;
+
+}
+
+dates {
+  font-size: 1.5em;
+}
+
+fullname {
+  display: block;
+  font-size: .7em;
+
+}
+
+quote {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate3d(0, -8em, 0);
+}
+
+big-quote {
+  font-size: 8em;
+  transform: translate3d(.5em, 0, 0);
+  transition-delay: 3s;
+}
+
+big-quote>span {
+  font-size: 1;
+}
+
+quote arrow-wrap {
+  display: block;
+  text-align: center;
+}
+
+arrow-wrap arrow {
+  margin: 0 30px;
+  align-items: center;
+}
+
+quote p {
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ccf;
+}
