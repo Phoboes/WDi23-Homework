@@ -66,6 +66,16 @@ nav li a {
 	
 }
 
+#photocolumn {
+
+		display: block;
+		width: 100px;
+		height: 50px;
+		background-color: black;
+	    z-index: 1;
+
+
+}
 
 #photocolumn1 {
 	width: 280px;
@@ -104,6 +114,7 @@ nav li a {
 	top: 620px;
 	left: 150px;
 	border: 1px solid white;
+
 
 }
 

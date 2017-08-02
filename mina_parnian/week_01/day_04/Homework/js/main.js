@@ -285,23 +285,21 @@ Tips
 
 Don't overthink this. Shorter code is probably the answer.*/
 
-let validNumberRule = {
-  length: 16,
+
+
+
+
+
+
+let validateCreditCard = function (input) {
+// let sum = 0;
+// // true or false
+
+for (i = 0; i <= input.lenght; i++) {
   
+  sum += input[i];
 
-
-
-
-}
-
-
-
-
-let validateCreditCard = function () {
-
-// true or false
-
-if () {
+if (input.length === 16 && number[input.length-1] % 2 === 0 ) {
   console.log(true)
 } else {
   console.log(false)
@@ -309,14 +307,14 @@ if () {
 
 }
 
+};
 
 
 
 
 
-
-validateCreditCard('9999-9999-8888-0000'); //return "true"
-validateCreditCard('4444-4444-4444-4444'); //return "false"
+validateCreditCard('9999999988880000'); //return "true"
+validateCreditCard('4444444444444444'); //return "false"
 
 
 

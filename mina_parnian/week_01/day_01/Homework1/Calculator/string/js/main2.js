@@ -1,24 +1,127 @@
-/*
-Multiplication Tables
+/*Strings
 
-Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, 
-it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+These exercises will test your knowledge of string functions, conditionals, and arrays. For many of them, you will want to consult the JavaScript strings reference to find useful string methods to call.
 
-Bonus: Use a nested for loop to show the tables for every multiplier from 1 
-to 10 (100 results total).
+DrEvil
 
+Create a function called DrEvil. It should take a single argument, an amount, and return ' dollars', except it will add '(pinky)' at the end if the amount is 1 million. For example:
+
+  DrEvil(10): 10 dollars
+  DrEvil(1000000): 1000000 dollars (pinky)
+*/
+
+// for (a = 10; a <= 100; a += 10) {
+	
+// 	if ( a < 100) {
+// 	console.log(`drEvil(${  a  }): ${ a } dollars`)
+
+// } else {
+// 	console.log(`drEvil(${ a }): ${ a } dollars (pinky)`)
+// }
+
+// };
+//---------------
+// const drEvil = function(a) {
+
+// 	if ( a < 1000000) {
+// 	console.log(`drEvil(${  a  }): ${ a } dollars`)
+
+// } else {
+// 	console.log(`drEvil(${ a }): ${ a } dollars (pinky)`)
+
+// }
+// };
+// drEvil(10);
+// drEvil(1000000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MixUp
+
+Create a function called mixUp. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:
+
+  mixUp('mix', 'pod'): 'pox mid'
+  mixUp('dog', 'dinner'): 'dig donner'
+Look up the JavaScript string reference to find methods which may be useful!
+*/
+
+
+/*const mixUp = function(a , b) {
+
+	let mix = "a" + "b";
+	console.log(`mixUp(${ a } + ${ b }): "${ a + b}"`);
+
+
+}
+
+mixUp("mix", "pod");
+mixUp("semi", "colon");
 */
 
 
 
 
-for (let i = 0; i <= 10; i++) {
-	console.log(`${ i } * 9 = ${i * 9}`);
-}
 
 
-for (let i = 0; i <= 10; i++) {
-	for (let j = 1; j <= 10; j++) {
-		console.log(` ${ i } * ${ j } = ${ i * j }`);
-	}
-}
+/*FixStart
+
+Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
+
+fixStart('babble'): 'ba**le'*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Verbing
+
+Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
+
+  verbing('swim'): 'swimming'
+  verbing('swimming'): 'swimmingly'
+  verbing('go'): 'go'*/
+
+
+
+
+
+
+/*Not Bad
+
+Create a function called notBad that takes a single argument, a string.
+
+It should find the first appearance of the substring 'not' and 'bad'.
+If the 'bad' follows the 'not', then it should replace the whole 'not'...'bad' substring with 'good' and return the result.
+If it doesn't find 'not' and 'bad' in the right sequence (or at all), just return the original sentence.
+For example:
+
+  notBad('This dinner is not that bad!'): 'This dinner is good!'
+  notBad('This movie is not so bad!'): 'This movie is good!'
+  notBad('This dinner is bad!'): 'This dinner is bad!'
+*/
+
+
+
+
