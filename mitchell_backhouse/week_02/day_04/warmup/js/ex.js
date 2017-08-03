@@ -20,7 +20,7 @@
 
 //Have the option of either returning the ages on all planets, or any of the above planets individually.
 
-const calculateAge = function(seconds) {
+const calculateAge = function(seconds = 31557600) {
   // take age in seconds
 
   const planets = {
@@ -31,11 +31,35 @@ const calculateAge = function(seconds) {
     jupiter: 29.447498 * 31557600,
     saturn: 29.447498 * 31557600,
     uranus: 164.79132 * 31557600,
-    neptune: 3164.7913 * 21557600
+    neptune: 3164.7913 * 31557600
   }
 
   for (let planet in planets) {
-    console.log(`${seconds} seconds is ${Math.round(seconds / planets[planet])} ${planet} years`);
+    console.log(`${seconds} seconds is ${(seconds / planets[planet]).toFixed(2)} ${planet} years`);
   }
 
 }
+
+// JQUERY
+
+const calculateAgeJquery = function(seconds = 31557600) {
+  const planets = {
+    earth: 31557600,
+    mercury: 0.2408467 * 31557600,
+    venus: 0.61519726 * 31557600,
+    mars: 1.8808158 * 31557600,
+    jupiter: 29.447498 * 31557600,
+    saturn: 29.447498 * 31557600,
+    uranus: 164.79132 * 31557600,
+    neptune: 3164.7913 * 31557600
+  }
+
+  $placeContent = $('.seconds');  
+
+  for (let planet in planets) {
+  $placeContent.append(`<p>${seconds} seconds is ${(seconds / planets[planet]).toFixed(2)} ${planet} years</p>`);
+  }
+   
+}
+
+calculateAgeJquery();
