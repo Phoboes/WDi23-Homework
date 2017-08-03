@@ -6,6 +6,7 @@
 // Bank
 //
 // There is only one bank. This bank has an array of accounts.
+
 const bank = {
   accounts : [];
   totalSum : function(total){
@@ -24,7 +25,9 @@ const bank = {
 
 const totalSumOfAccounts = function(){
   let totalSum = 0;
-
+for (let i = 0; i < bank.accounts.length; i++){
+  
+}
 }
 
 

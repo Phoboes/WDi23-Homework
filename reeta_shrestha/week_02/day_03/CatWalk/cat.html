@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+</head>
+
+<body>
+
+  <img src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  <div id="clone-cat"></div>
+
+  <script>
+    let cat = document.getElementsByTagName('img')[0];
+    cat.style.position = 'absolute';
+    cat.style.left = '0px';
+    cat.style.transform = "scaleX(1)";
+
+
+    let catWalkfromLeft = function() {
+      let oldPosition = parseInt(cat.style.left);
+
+      if (cat.style.transform == "scaleX(-1)") {
+
+        // cat heading to the left
+        let newPosition = oldPosition - 10;
+        if (newPosition < 0) {
+          cat.style.transform = "scaleX(1)";
+        } else {
+          cat.style.left = newPosition + 'px';
+        }
+      } else {
+
+        // cat heading to the right
+        let newPosition = oldPosition + 10;
+        if (newPosition > (innerWidth - cat.width)) {
+          cat.style.transform = "scaleX(-1)";
+        } else {
+          cat.style.left = newPosition + 'px';
+        }
+      }
+
+    };
+    setInterval(catWalkfromLeft, 50);
+
+    // clone cat always apperaing from the left
+    let cloneCat = cat.cloneNode(true);
+    document.getElementById('clone-cat').appendChild(cloneCat);
+    cloneCat.style.left = (innerWidth / 2 - cloneCat.width / 2) + 'px';
+
+    let cloneCatWalkfromLeft = function() {
+      let oldPosition = parseInt(cloneCat.style.left);
+      let newPosition = oldPosition + 10;
+      if (newPosition > (innerWidth - cloneCat.width)) {
+        cloneCat.style.left = 0;
+      } else {
+        cloneCat.style.left = newPosition + 'px';
+      }
+    };
+    setInterval(cloneCatWalkfromLeft, 50);
+  </script>
+
+</body>
+
+</html>

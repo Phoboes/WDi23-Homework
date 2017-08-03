@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+body {
+	background-color: #A6A6A6;
+
+}
+/*.....................................
+nav
+*/
+
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	background-color: #636266;
+	color: #ffffff;
+	height: 50px;
+	padding: 20px;
+	margin: 0;
+	font-size: 80px;
+	text-align: center;
+}
+
+nav a {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, .5);
+	padding: 1em;
+	color: #636266;
+	position: relative;
+	left: 64%;
+	top: 50px;
+	margin: 5px;
+
+
+
+
+}
+
+ nav a:hover {
+	background-color: #636266;
+	color: #ffffff;
+}
+
+/*..............................................
+main
+*/
+
+
+img {
+	width: 100%;
+}
+p {	
+	color: white;
+	padding: 10px;
+	text-align: justify;
+}
+
+.box1 {
+	height: 400px;
+	width: 250px;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 0 40px 0 0;
+	background-color: rgba(255, 255, 255, .1);
+
+
+}
+.box2 {
+	height: 400px;
+	width: 250px;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 0 40px 0 40px;
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.box3 {
+	height: 400px;
+	width: 250px;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 0 0 0 40px;
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.boxes {
+
+	background-color: black;
+	padding: 50px 0 0 160px;
+
+
+}
+
+main a {
+	text-decoration: none;
+	color: #bbbbbb;
+	background-color: rgba(255, 255, 255, .1);
+	
+
+}
+
+/*--------------------------------------------------
+page2 container
+*/
+
+
+.body2 {
+	background-color: #eadc47;
+}
+
+
+.container2 {
+	background-color: rgba(0, 0, 0, .2);
+	height: 1200px;
+	width: 850px;
+	margin: 0 auto;
+
+}
+.p2 {
+	font-size: 16px;
+	line-height: 35px;
+	text-align: justify;
+	padding: 2em;
+}
+
+.p2:hover {
+	color: #636266
+}
