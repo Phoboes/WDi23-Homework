@@ -7,29 +7,8 @@
 //
 // There is only one bank. This bank has an array of accounts.
 
-const bank = {
-  accounts : [];
-  totalSum : function(total){
-    let sum = 0;
-    for (var i = 0; i < bank.accounts.length; i++){
-      if (bank.accounts[i].currentBalance){
-        sum += bank.accounts[i].currentBalance;
-        return sum;
-      }
-    }
-  }
-  addAccount : function(account){
-    this.accounts.push(account);
-  }
-}
-
-const totalSumOfAccounts = function(){
-  let totalSum = 0;
-for (let i = 0; i < bank.accounts.length; i++){
-  
-}
-}
-
+let bank = [];
+let sum = 0;
 
 //The bank needs a method that will return the total sum of money in the accounts. It also needs an addAccount
 //method that will enroll a new account at the bank and add it to the array of accounts. There is no need to create
@@ -37,19 +16,49 @@ for (let i = 0; i < bank.accounts.length; i++){
 //
 // The bank has many accounts. Accounts should be objects that all share a set of common functionality.
 //
-function account(currentBalance, ownersName){
-  this.currentBalance = currentBalance;
-  this.ownersName = ownersName;
+
+const addAccount = function(currentBalance, name){
+  let account = {
+    currentBalance : parseFloat(currentBalance),
+    name: name
+  }
+  bank.push(account);
+};
+
+const totalSum = function(bank){
+  for (let i = 0; i < bank.length; i++){
+    sum += bank[i]['currentBalance'];
+  }
+return sum;
+};
+
+
+
+const withdraw = function(accountname, amount){
+  for (let i = 0; i < bank.length; i++){
+    if (accountname === bank[i].name){
+      let rightAccount = bank[i];
+    rightAccount['currentBalance'] -= amount;
+  }
+  }
 }
 
-account.prototype.deposit = function(amount){
-  this.currentBalance += amount;
+const deposit = function(accountname, amount){
+  for (let i = 0; i < bank.length; i++){
+    if (accountname === bank[i].name){
+    return bank[i]['currentBalance'] += amount;
+  }
+  }
 }
 
-account.prototype.withdraw = function(amount){
-  this.currentBalance -= amount;
-}
+addAccount('1345.25', 'Henry');
+addAccount('55.55', 'Adam');
+console.log(bank);
+console.log(totalSum(bank));
 
+withdraw('Adam', 5);
+console.log(bank);
+console.log(totalSum(bank));
 // Accounts
 //
 // Accounts have a current balance and owner's name. You should be able to

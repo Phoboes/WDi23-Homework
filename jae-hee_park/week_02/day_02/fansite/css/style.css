@@ -1,0 +1,209 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Share+Tech');
+</style>
+
+body {
+  background-color: white;
+  font-family: 'Share Tech Mono', monospace;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 960px;
+  font-family: 'Share Tech Mono', monospace;
+  margin: auto;
+  padding: 0.5em;
+}
+
+nav {
+  background-color: black;
+  padding: 1px;
+  width: 960px;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding-right: 25px;
+}
+
+nav a:hover{
+  color: rgb(207, 91, 228);
+  text-decoration: none;
+}
+
+h1 {
+  text-align:center;
+  font-size: 100px;
+  text-shadow: 2px 2px rgb(207, 91, 228);
+  margin-top: 0;
+}
+
+main img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main p{
+  text-align: center;
+  font-size: 40px;
+  padding: 0;
+  margin: 0.5em;
+}
+
+main p span {
+  color: rgb(207, 91, 228);
+}
+
+div .about {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.info {
+  font-size: 14px;
+  font-family: 'Share Tech', sans-serif;
+  text-align: justify;
+  padding-top: 10px;
+}
+
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+
+div.number {
+  display: inline-block;
+  width: 10%;
+  color: rgb(207, 91, 228);
+  height: 120px;
+  padding: 20px;
+  line-height: 120px;
+  font-size: 100px;
+  text-align: center;
+}
+div.number.grow:hover{
+  color: rgb(246, 71, 187);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.joel {
+  width: 50%;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.facts{
+  text-align: justify;
+  font-size: 14px;
+}
+
+.one {
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px;
+  width: 78%;;
+}
+
+.bold {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.quote {
+  display: inline-block;
+  width: 60%;
+  margin-top: 35px;
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;
+  height: 60px;
+  vertical-align: top;
+}
+.quoteblack{
+  color: rgb(207, 91, 228);
+  font-style: normal;
+}
+
+.imgvisit {
+  display: inline-block;
+  width: 35%;
+  margin-top: 20px;
+  border-radius: 2%;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+  background-color: rgb(207, 91, 228);
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0.01px 0 0.01px 15px;
+}
