@@ -1,0 +1,38 @@
+body {
+  font-family: "Times New Roman";
+  color: #656565;
+  width: 960px;
+  margin: auto;
+}
+
+.container {}
+
+.logo, .heading, .footer {
+  padding: 20px 0 20px 0;
+}
+
+.heading {
+  font-size: 1.5em;
+}
+
+.date-link:hover {
+  color: #0f0;
+}
+
+p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.press-logo {
+  text-align: center;
+  border: 5px solid #aca6aa;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f00;
+}
