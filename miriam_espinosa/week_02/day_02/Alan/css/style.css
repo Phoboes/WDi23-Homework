@@ -23,8 +23,8 @@ h1 {
   margin: 0;
 }
 
-.biography {
-  display: inline-block;
+main {
+  display: relative;
   width: 50%;
   margin-top: -25px;
 }
@@ -61,7 +61,7 @@ img {
 }
 
 aside{
-  display: inline-block;
+  display: relative;
   width: 25%;
   float: left;
   background-color: #f2f2f2;
