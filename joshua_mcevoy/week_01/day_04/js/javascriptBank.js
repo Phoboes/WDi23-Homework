@@ -11,26 +11,19 @@
 // The bank has many accounts. Accounts should be objects that all share a set of common functionality.
 //
 
+let bank = [];
+
+const addAccount = function (accountTitle, accountBalance){
+  let account = {
+    accountName: accountTitle,
+    accountBalance: parseFloat(accountBalance)
+  }
+  bank.push(account);
+}
+
+addAccount('Savings', '1345.25');
 
 
-// let bank = [ 356.49, 1035.13, 3000.99, 543.51 ];
-//
-//
-// const totalSum = function () {
-//   let total = 0;
-//   for (let i = 0; i < bank.length; i++){
-//     total += bank[i];
-//   }
-//   console.log(total);
-// };
-//
-// const addAccount = function (amount){
-//   bank.push(amount);
-// };
-//
-//
-// totalSum();
-// addAccount(172.45);
 
 // Accounts
 //
@@ -43,13 +36,3 @@
 // You should write a basic story through a series of JavaScript commands that
 //shows that the methods do indeed work as expected: add some accounts, show the
 //total balance, make some deposits and withdrawals, show the new total balance.
-
-
-let bank = [
-  {
-    currentBalance: ,
-    ownersName: "",
-
-  }
-
-]
