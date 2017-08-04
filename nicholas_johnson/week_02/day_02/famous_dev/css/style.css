@@ -1,0 +1,144 @@
+body {
+  overflow: hidden;
+  height: 100%;
+  background: #000;
+  color: #0f0;
+  margin: 0px;
+
+}
+
+.title {
+  text-align: center;
+  line-height: 0px;
+  margin-top: 0;
+  margin-left: 580px;
+  display: inline-block;
+  font-family: Monaco, Andale Mono, Monospace, Courier;
+  font-weight: bold;
+  color: #000;
+
+}
+
+#window {
+  background-color: #999;
+  width: 100%;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+#red {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: #f00;
+  vertical-align: middle;
+  margin: 8px;
+}
+
+#yellow {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: #ff0;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+#green {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: #0f0;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #0b0;
+  line-height: 0px;
+}
+
+.command-line {
+  overflow: hidden;
+  font-size: 1em;
+  font-family: Monaco, Andale Mono, Monospace, Courier;
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 0 0 2px rgba(#0b0, 0.75);
+  padding-top: 10px;
+  padding-left: 10px;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+#second {
+  animation-fill-mode:both;
+  animation-delay: 2.5s;
+}
+
+#third {
+  animation-fill-mode:both;
+  animation-delay: 5s;
+}
+
+#fourth {
+  animation-fill-mode:both;
+  animation-delay: 7.5s;
+}
+
+#fifth {
+  animation-fill-mode:both;
+  animation-delay: 10s;
+}
+
+#sixth {
+  animation-fill-mode:both;
+  animation-delay: 12.5s;
+}
+
+#seventh {
+  animation-fill-mode:both;
+  animation-delay: 15s;
+}
+
+#eighth {
+  animation-fill-mode:both;
+  animation-delay: 17.5s;
+}
+
+#ninth {
+  animation-fill-mode:both;
+  animation-delay: 20s;
+}
+
+#tenth {
+	animation-fill-mode:both;
+  animation-delay: 23s;
+}
+
+a {
+	margin-right: 30px;
+	margin-top: 15px;
+	display: inline-block;
+	color: #0f0;
+}
+
+a:visited {
+	color: #0f0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0b0; }
+}
