@@ -1,0 +1,85 @@
+// business logic
+const bank = {
+  checking: 0,
+  savings: 0,
+
+  getTotal() {
+    return this.checking + this.savings;
+  },
+  deposit(account, amount) {
+    const amountSanitised = parseInt(amount) || 0;
+    if (amount >= 0) {
+      this[account] += amountSanitised;
+    }
+  }, 
+  withdraw(account, amount) {
+    const amountSanitised = parseInt(amount) || 0;
+    if (amountSanitised >= 0 && amountSanitised <= this.getTotal()) {
+      if (amountSanitised >= this[account]) {
+        // split amount
+        const remainder = amountSanitised - this[account];
+        // withdraw from both
+        this[account] = 0;
+        account === 'savings' ? this.checking -= remainder : this.savings -= remainder;
+        
+      } else {
+        this[account] -= amountSanitised;
+      }
+    }
+
+  }
+}
+
+
+const render = function() {
+  $('#checking-balance').text( '$' + bank.checking ); 
+  $('#savings-balance').text( '$' + bank.savings ); 
+  if (bank.checking === 0) {
+    $('#checking-balance').addClass('zero');
+  } else {
+    $('#checking-balance').removeClass('zero');
+  }
+  if (bank.savings === 0) {
+    $('#savings-balance').addClass('zero');
+  } else {
+    $('#savings-balance').removeClass('zero');
+  }
+}
+
+$(document).ready( function() {
+  render();
+  // UI logic
+  // checking
+  $('#checking-deposit').on('click', function() {
+    const amount = $('#checking-amount').val();
+
+    bank.deposit('checking', amount);
+    render();
+  });
+
+  $('#checking-withdraw').on('click', function() {
+    const amount = $('#checking-amount').val();
+
+    bank.withdraw('checking', amount);
+    render();
+  });
+
+  // savings
+  $('#savings-deposit').on('click', function() {
+    const amount = $('#savings-amount').val();
+
+    bank.deposit('savings', amount);
+    render();
+  });
+
+  $('#savings-withdraw').on('click', function() {
+    const amount = $('#savings-amount').val();
+
+    bank.withdraw('savings', amount);
+    render();
+  });
+  
+});
+
+// update #checking-balance value
+// update #savings-balance value
