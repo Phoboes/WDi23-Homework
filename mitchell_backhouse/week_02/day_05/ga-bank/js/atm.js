@@ -52,10 +52,13 @@ const render = function() {
 }
 
 const renderTransaction = function(action, account, amount) {
-  transactions = $('.transactions');
-  item = $('<p>' + action + ' - ' + account + ': ' + '$' + amount + '</p>');
-
-  transactions.append(item);
+  transactions = $('.transactions tbody');
+  if (action === 'Deposit') {
+    item = $('<tr class="itemDeposit"><td>' + action + '</td><td>' + account + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td>/<tr>');
+  } else {
+    item = $('<tr class="itemWithdraw"><td>' + action + '</td><td>' + account + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td>/<tr>');
+  }
+  transactions.prepend(item);
 }
 
 $(document).ready( function() {

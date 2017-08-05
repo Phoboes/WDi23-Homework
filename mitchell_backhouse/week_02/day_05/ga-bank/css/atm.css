@@ -62,18 +62,26 @@
 }
 
 .transactions {
-  width: 100%;
+  margin: 0 auto;
+  width: 685px;
+  border: 1px solid #295A33;
 }
 
-.transactions h3 {
-  margin: 0;
-  padding: 5px;
-  font-size: 20px;
+table {
+  border-collapse: collapse;
+}
+.itemDeposit {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
   background-color: #6C9A74;
 }
 
-.item {
-
+.itemWithdraw {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #F52F4F;
 }
 
 #reset {
