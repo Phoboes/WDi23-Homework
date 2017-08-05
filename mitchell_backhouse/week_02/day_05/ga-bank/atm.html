@@ -6,11 +6,15 @@
   <link rel="stylesheet" href="css/atm.css">
   <script src="js/jquery.js"></script>
   <script src="js/atm.js"></script>
+  <script src="js/utility.js"></script>
   <!--<script src="js/joel.example.js"></script>-->
 </head>
 <body>
 
   <div id="content">
+
+    <button id="reset">Reset Transactions</button>
+    <button id="toggleHidden">Toggle Hidden</button>
 
     <div id="nav">
       <div id="logo"><img src="img/ga.png" alt="Bank of GA"/></div>
@@ -34,6 +38,10 @@
     </div>
 
     <div class="clear"></div>
+
+    <div class="transactions hidden">
+      <h3>Transactions</h3>
+    </div>
 
   </div>
 
