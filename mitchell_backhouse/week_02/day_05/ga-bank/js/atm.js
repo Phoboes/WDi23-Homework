@@ -49,14 +49,19 @@ const render = function() {
   } else {
     $('#savings-balance').removeClass('zero');
   }
+
+  // remove tr elements after 10
+  if ($('table tbody tr').size() > 10) {
+    $('table tbody tr:last').remove();
+  }
 }
 
 const renderTransaction = function(action, account, amount) {
   transactions = $('.transactions tbody');
   if (action === 'Deposit') {
-    item = $('<tr class="itemDeposit"><td>' + action + '</td><td>' + account + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td>/<tr>');
+    item = $('<tr class="itemDeposit"><td>' + account + '</td><td>' + action + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td></tr>');
   } else {
-    item = $('<tr class="itemWithdraw"><td>' + action + '</td><td>' + account + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td>/<tr>');
+    item = $('<tr class="itemWithdraw"><td>' + account + '</td><td>' + action + '</td><td>' + '$' + amount + '</td><td>' + '$' + bank[account] + '</td></tr>');
   }
   transactions.prepend(item);
 }
