@@ -38,10 +38,18 @@
           <div class="line"></div>
           <div class="expandContainer">
             <div class="functionBar">
-                <input class="expandButton" id="checkingExpandButton" type="button" value="|||">
-              <input class="amount hidden" id="checking-amount" type="number" placeholder="enter an amount" />
-              <input class="buttons hidden" id="checking-deposit" type="button" value="Deposit" />
-              <input class="buttons hidden" id="checking-withdraw" type="button" value="Withdraw" />
+              <input class="expandButton" id="checkingExpandButton" type="button" value="|||">
+              <div id="slideChecking">
+                <div id="slideCheckingAmount">
+                  <input class="amount hidden" id="checking-amount" type="number" placeholder="enter an amount" />
+                </div>
+                <div id="slideCheckingDeposit">
+                  <input class="buttons hidden" id="checking-deposit" type="button" value="Deposit" />
+                </div>
+                <div id="slideCheckingWithdraw">
+                  <input class="buttons hidden" id="checking-withdraw" type="button" value="Withdraw" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -68,10 +76,18 @@
         <div class="expandContainer">
 
           <div class="functionBar">
-              <input class="expandButton" id="savingsExpandButton" type="button" value="|||">
-            <input class="amount" id="savings-amount" type="number" placeholder="enter an amount" />
-            <input class="buttons" id="savings-deposit" type="button" value="Deposit" />
-            <input class="buttons" id="savings-withdraw" type="button" value="Withdraw" />
+            <input class="expandButton" id="savingsExpandButton" type="button" value="|||">
+            <div id="slideSavings">
+              <div id="slideSavingsAmount">
+                <input class="amount" id="savings-amount" type="number" placeholder="enter an amount" />
+              </div>
+              <div id="slideSavingsDeposit">
+                <input class="buttons" id="savings-deposit" type="button" value="Deposit" />
+              </div>
+              <div id="slideSavingsWithdraw">
+                <input class="buttons" id="savings-withdraw" type="button" value="Withdraw" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

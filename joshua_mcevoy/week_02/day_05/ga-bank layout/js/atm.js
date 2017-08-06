@@ -18,16 +18,17 @@ const bank = {
     //if not value then amount is equal to 0.
     amount = parseFloat(amount) || 0;
     if (amount !== Math.abs(amount)){
-      console.log(`Must be positive number.`);
+      // alert(`Must be a positive number.`);
+      console.log(`Must be a positive number.`);
     }
     else {
       if (account === 'checking'){
       this[account] += parseFloat(amount);
-      $('#checking-balance').text(`$${bank.checking}`);
+      $('#checking-balance').text(`$${bank.checking.toFixed(2)}`);
       }
       else if (account === 'savings'){
         this[account] += parseFloat(amount);
-        $('#savings-balance').text(`$${bank.savings}`);
+        $('#savings-balance').text(`$${bank.savings.toFixed(2)}`);
       }
     }
   },
@@ -37,25 +38,23 @@ const bank = {
     //makes sure amount is an int so can be strictly equal to Math.abs(amount)
     amount = parseFloat(amount) || 0;
     //if not enough in account take from other
-    // console.log(`amount = ${amount}`);
-    // console.log(`bank[account] = ${bank[account]}`);
-    // console.log(`bank.total = ${bank.total}`);
     if (amount > bank[account] && amount < bank.total){
       if(account === "checking"){
         let floatAmount = amount - bank[account];
         bank.checking = 0;
         bank.savings = bank.savings - floatAmount;
-        $('#checking-balance').text(`$${bank.checking}`);
-        $('#savings-balance').text(`$${bank.savings}`);
+        $('#checking-balance').text(`$${bank.checking.toFixed(2)}`);
+        $('#savings-balance').text(`$${bank.savings.toFixed(2)}`);
       }
       else if (account === 'savings'){
         let floatAmount = amount - bank[account];
         bank.savings = 0;
         bank.checking = bank.checking - floatAmount;
-        $('#checking-balance').text(`$${bank.savings}`);
-        $('#savings-balance').text(`$${bank.checking}`);
+        $('#checking-balance').text(`$${bank.checking.toFixed(2)}`);
+        $('#savings-balance').text(`$${bank.savings.toFixed(2)}`);
       }
       else {
+        // alert(`Funds are too low, select another amount.`);
         console.log(`Funds are too low, select another amount.`);
       }
 
@@ -65,19 +64,21 @@ const bank = {
     else if((bank[account] - amount) >= 0 && amount === Math.abs(amount)){
       if(account === 'checking'){
         this[account] -= parseFloat(amount);
-        $('#checking-balance').text(`$${bank.checking}`);
+        $('#checking-balance').text(`$${bank.checking.toFixed(2)}`);
       }
       else if (account === 'savings'){
         this[account] -= parseFloat(amount);
-        $('#savings-balance').text(`$${bank.savings}`);
+        $('#savings-balance').text(`$${bank.savings.toFixed(2)}`);
       }
     }
     //if not positive number
     else if (amount !== Math.abs(amount)){
+      // alert(`Must be a positive number`);
       console.log(`Must be a positive number`);
     }
     //any other outcome
     else {
+      // alert(`Funds are too low, select another amount.`);
       console.log(`Funds are too low, select another amount.`);
     }
   }
@@ -86,7 +87,7 @@ const bank = {
 const render = function (account) {
   //All DOM updating code here
   //if account is $0 display red else green
-  if($('#checking-balance').text() === '$0'){
+  if($('#checking-balance').text() === '$0.00'){
     $('#checkingBordered').css('background-color', '#FFD2D5');
     $('#checkingExpandButton').css('background-color', '#FFD2D5');
   }
@@ -94,7 +95,7 @@ const render = function (account) {
     $('#checkingBordered').css('background-color', '#E3E2E5');
     $('#checkingExpandButton').css('background-color', '#E3E2E5');
   }
-  if($('#savings-balance').text() === '$0'){
+  if($('#savings-balance').text() === '$0.00'){
     $('#savingsBordered').css('background-color', '#FFD2D5');
     $('#savingsExpandButton').css('background-color', '#FFD2D5');
   }
@@ -103,9 +104,9 @@ const render = function (account) {
     $('#savingsExpandButton').css('background-color', '#E3E2E5');
   }
   bank.total = bank.checking + bank.savings;
-  $('#totalBalanceChecking').text(`$${bank.total}`);
+  $('#totalBalanceChecking').text(`$${bank.total.toFixed(2)}`);
   bank.total = bank.checking + bank.savings;
-  $('#totalBalanceSavings').text(`$${bank.total}`);
+  $('#totalBalanceSavings').text(`$${bank.total.toFixed(2)}`);
 };
 
 //UI/DOM code
@@ -135,14 +136,20 @@ $(document).ready(function () {
     render('savings');
   });
   $('#checkingExpandButton').on('click', function () {
-    $('#checking-amount').fadeToggle();
-    $('#checking-deposit').fadeToggle();
-    $('#checking-withdraw').fadeToggle();
+    $("#slideCheckingAmount").animate({width:'toggle'},200);
+    $("#slideCheckingDeposit").delay( 180 ).animate({width:'toggle'},200);
+    $("#slideCheckingWithdraw").delay( 380 ).animate({width:'toggle'},200);
+    // $('#checking-amount').fadeToggle();
+    // $('#checking-deposit').fadeToggle();
+    // $('#checking-withdraw').fadeToggle();
   })
   $('#savingsExpandButton').on('click', function () {
-    $('#savings-amount').fadeToggle();
-    $('#savings-deposit').fadeToggle();
-    $('#savings-withdraw').fadeToggle();
+    $("#slideSavingsAmount").animate({width:'toggle'},200);
+    $("#slideSavingsDeposit").delay( 180 ).animate({width:'toggle'},200);
+    $("#slideSavingsWithdraw").delay( 380 ).animate({width:'toggle'},200);
+    // $('#savings-amount').fadeToggle();
+    // $('#savings-deposit').fadeToggle();
+    // $('#savings-withdraw').fadeToggle();
   })
   render();
 });

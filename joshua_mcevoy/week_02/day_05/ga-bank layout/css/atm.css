@@ -34,6 +34,10 @@ p {
   /*text-align: right;*/
 }
 
+#checkingExpandButton {
+  float: left;
+}
+
 #content {
   margin: 0 auto;
   width: 488px;
@@ -55,6 +59,46 @@ p {
 
 #savings {
 
+}
+
+#savingsExpandButton {
+  float: left;
+}
+
+#slideChecking {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#slideSavings {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#slideSavingsAmount {
+  display: inline-block;
+}
+
+#slideSavingsDeposit {
+  display: inline-block;
+}
+
+#slideSavingsWithdraw{
+  display: inline-block;
+}
+
+#slideCheckingAmount {
+  display: inline-block;
+}
+
+#slideCheckingDeposit {
+  display: inline-block;
+}
+
+#slideCheckingWithdraw {
+  display: inline-block;
 }
 
 #totalBalance {
@@ -93,8 +137,7 @@ p {
 .amount {
   margin-left: 10px;
   margin-right: 8px;
-  margin-top: 11px;
-  vertical-align: top;
+  vertical-align: middle;
   padding-left: 6px;
   font-family: 'Roboto', sans-serif;
   height: 30px;
@@ -121,8 +164,7 @@ p {
   height: 34px;
   min-width: 150px;
   padding: 0 26px 34px 26px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  vertical-align: middle;
   border-radius: 24px;
   line-height: 36px;
   text-align: center;
@@ -175,9 +217,9 @@ p {
   display: inline-block;
 }
 
-.filler {
+/*.filler {
   width: 100px;
-}
+}*/
 
 .labels {
   margin-left: 10px;
