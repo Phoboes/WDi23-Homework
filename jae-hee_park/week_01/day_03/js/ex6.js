@@ -22,12 +22,12 @@ const guessLetter = function(guessedLetter){
   for( let i = 0; i < lettersOfWord.length; i++){
     let x = lettersOfWord[i];
     if (x === guessedLetter){
-      currentGuessedLetters.push(guessedLetter);
       console.log(`${x} congratulations you have found a new letter`);
       }
       if (currentGuessedLetters.length === lettersOfWord.length){
         console.log('congratulations you have won the game!');
       }
+      currentGuessedLetters.push(guessedLetter);
     }
   }
   guessLetter('F');
@@ -68,12 +68,13 @@ const guessLetter = function(guessedLetter){
 
 var lettersOfWord = ['F','O','X'];
 var currentGuessedLetters = ['F','I','O'];
+let stateOfHangman = 0;
 
 const guessLetter = function(guessedLetter){
-  let stateOfHangman = 0;
   for (let i = 0; i < currentGuessedLetters.length; i++){
     if (guessedLetter === currentGuessedLetters[i]) {
       console.log("You have already guessed this letter");
+      break;
     } else {
       currentGuessedLetters.push(guessedLetter);
       for( let j = 0; j < lettersOfWord.length; j++){
@@ -83,7 +84,13 @@ const guessLetter = function(guessedLetter){
           } else {
             stateOfHangman += 1;
             if (stateOfHangman === 6) {
-              console.log("pic of hangman");
+              console.log("_________")
+              console.log("|  |")
+              console.log("|  0")
+              console.log("| /|\\")
+              console.log("| / \\")
+              console.log("|")
+              console.log("|")
             }
           }
         }
