@@ -9,15 +9,24 @@ def continue_story
 end
 
 def get_user_input
-  puts "(+) - Addition".white
-  puts "(-) - Subtraction".white
-  puts "(/) - Division".white
-  puts "(*) - Multiplication".white
-  puts "(^) - Exponent".white
-  puts "(s) - Square Root".white
-  puts "(q) - Quit".black.on_white
+  puts "----------------------------".green
+  print "(+) - Addition             ".white
+  puts "|".green
+  print "(-) - Subtraction          ".white
+  puts "|".green
+  print "(/) - Division             ".white
+  puts "|".green
+  print "(*) - Multiplication       ".white
+  puts "|".green
+  print "(^) - Exponent             ".white
+  puts "|".green
+  print "(s) - Square Root          ".white
+  puts "|".green
+  print "(q) - Quit                 ".black.on_white
+  puts "|".green
+  puts "----------------------------".green
 
-  print "Enter your selection:".white.on_red
+  print "Enter your selection:".light_white.on_red
   print " "
 
   # debug inside pry
