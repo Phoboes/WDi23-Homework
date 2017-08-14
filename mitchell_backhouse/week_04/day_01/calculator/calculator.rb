@@ -1,22 +1,24 @@
 require 'pry'
+require 'colorize'
 require 'io/console'
 
 def continue_story
-  print "press any key"
+  print "press any key to continue"
   STDIN.getch
   system "clear"
 end
 
 def get_user_input
-  puts "(+) - Addition"
-  puts "(-) - Subtraction"
-  puts "(/) - Division"
-  puts "(*) - Multiplication"
-  puts "(^) - Exponent"
-  puts "(s) - Square Root"
-  puts "(q) - Quit"
+  puts "(+) - Addition".white
+  puts "(-) - Subtraction".white
+  puts "(/) - Division".white
+  puts "(*) - Multiplication".white
+  puts "(^) - Exponent".white
+  puts "(s) - Square Root".white
+  puts "(q) - Quit".black.on_white
 
-  print "Enter your selection: "
+  print "Enter your selection:".white.on_red
+  print " "
 
   # debug inside pry
   # binding.pry
@@ -30,10 +32,13 @@ def addition
   print "Enter your second number: "
   num2 = gets.to_f
 
-  puts "\nAddition: #{num1} + #{num2}"
-  puts "----------------------------"
-  puts num1 + num2
-  puts "----------------------------\n\n"
+  print "\nAddition: ".black.on_white
+  print "#{num1}".blue.on_yellow
+  print " + ".black.on_white
+  puts "#{num2}".blue.on_yellow
+  puts "----------------------------".green
+  puts (num1 + num2)
+  puts "----------------------------\n\n".green
 
   continue_story
 end
@@ -45,10 +50,13 @@ def subtraction
   num2 = gets.to_f
 
 
-  puts "\nSubtraction: #{num1} - #{num2}"
-  puts "----------------------------"
+  print "\nSubtraction: ".black.on_white
+  print "#{num1}".blue.on_yellow
+  print " - ".black.on_white
+  puts "#{num2}".blue.on_yellow
+  puts "----------------------------".green
   puts num1 - num2
-  puts "----------------------------\n\n"
+  puts "----------------------------\n\n".green
 
   continue_story
 end
@@ -59,10 +67,13 @@ def division
   print "Enter your second number: "
   num2 = gets.to_f
 
-  puts "\nDivision: #{num1} / #{num2}"
-  puts "----------------------------"
+  print "\nDivision: ".black.on_white
+  print "#{num1}".blue.on_yellow
+  print " / ".black.on_white
+  puts "#{num2}".blue.on_yellow
+  puts "----------------------------".green
   puts num1 / num2
-  puts "----------------------------\n\n"
+  puts "----------------------------\n\n".green
 
   continue_story
 end
@@ -73,10 +84,13 @@ def multiplication
   print "Enter your second number: "
   num2 = gets.to_f
 
-  puts "\nMultiply: #{num1} * #{num2}"
-  puts "----------------------------"
+  print "\nMultiply: ".black.on_white
+  print "#{num1}".blue.on_yellow
+  print " * ".black.on_white
+  puts "#{num2}".blue.on_yellow
+  puts "----------------------------".green
   puts num1 * num2
-  puts "----------------------------\n\n"
+  puts "----------------------------\n\n".green
 
   continue_story
 end
@@ -87,10 +101,13 @@ def exponent
   print "Enter your exponent: "
   num2 = gets.to_f
 
-  puts "\nExponent: #{num1} to the power of #{num2}"
-  puts "----------------------------"
+  print "\nExponent: ".black.on_white
+  print "#{num1}".blue.on_yellow
+  print " to the power of ".black.on_white
+  puts "#{num2}".blue.on_yellow
+  puts "----------------------------".green
   puts num1 ** num2
-  puts "----------------------------\n\n"
+  puts "----------------------------\n\n".green
 
   continue_story
 end
@@ -99,10 +116,11 @@ def square_root
   print "\nEnter your number: "
   num1 = gets.to_f
 
-  puts "\nSquare Root: #{num1}"
-  puts "----------------------------"
+  print "\nSquare Root: ".black.on_white
+  puts"#{num1}".blue.on_yellow
+  puts "----------------------------".green
   puts Math.sqrt(num1)
-  puts "----------------------------\n\n"
+  puts "----------------------------\n\n".green
 
   continue_story
 end
