@@ -36,13 +36,7 @@ $my_trip = [];
 $total_stops = 0;
 $stops = [];
 
-def single_trip
-  print "Which line are you getting on:"
-   line = gets.chomp
-  print "Which stop are you getting on:"
-  stop_in = gets.chomp
-  print "Which stop are you getting off:"
-  stop_out = gets.chomp
+def single_trip (line, stop_in, stop_out)
 
   stop_in_position = $subway[line].index stop_in
   stop_out_position = $subway[line].index stop_out
@@ -69,8 +63,31 @@ def single_trip
     end
 
   end
+
+end
+
+def full_trip
+  print "Which line are you getting on:"
+   line_in = gets.chomp
+  print "Which stop are you getting on:"
+  stop_in = gets.chomp
+  print "Which line are you getting off:"
+  line_out = gets.chomp
+  print "Which stop are you getting off:"
+  stop_out = gets.chomp
+
+  if line_in == line_out
+
+    puts single_trip(line_in, stop_in, stop_out)
+
+  else
+
+    puts single_trip(line_in, stop_in, "Union Square")
+    puts single_trip(line_out, "Union Square", stop_out)
+  end
+
 puts $my_trip
 end
 
 
-puts single_trip
+puts full_trip
