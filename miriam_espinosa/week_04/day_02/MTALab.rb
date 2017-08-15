@@ -56,10 +56,18 @@ def single_trip
 
     until i  >= stop_out_position+1
       $my_trip.push ($subway[line][i])
-      # my_trip = my_trip + " " + subway[line][i] + ",";
-      # stops.push total_stops +=
+
       i+= 1
     end
+  else
+    i = stop_in_position-1
+
+    until i  <= stop_out_position-1
+      $my_trip.push ($subway[line][i])
+
+      i-= 1
+    end
+
   end
 puts $my_trip
 end
