@@ -3,9 +3,10 @@ require 'colorize'
 require 'io/console'
 
 class Line
-    attr_reader :stations, :change_point_index
+    attr_reader :name, :stations, :change_point_index
 
-    def initialize stations, change_point
+    def initialize name, stations, change_point
+        @name = name
         @stations = stations
         @change_point_index = @stations.index(change_point)
     end
@@ -13,9 +14,9 @@ end
 
 class Travel
     # manip methods for travel
-    line_N = Line.new ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'], 'Union Square'
-    line_L = Line.new ['8th', '6th', 'Union Square', '3rd', '1st'], 'Union Square'
-    line_6 = Line.new ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place'], 'Union Square'
+    line_N = Line.new 'line N', ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'], 'Union Square'
+    line_L = Line.new 'line L', ['8th', '6th', 'Union Square', '3rd', '1st'], 'Union Square'
+    line_6 = Line.new 'line 6', ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place'], 'Union Square'
 
     @@lines = [line_N, line_L, line_6]
 
@@ -32,15 +33,25 @@ class Travel
 
         if start_line == end_line
             if start_index < end_index
-                p start_line.stations[start_index..end_index]
-                @@trip_counter = start_line.stations[start_index..end_index].size
-                puts "This trip took #{@@trip_counter - 1} stops"
-
+                stations = start_line.stations[start_index..end_index]
+                if stations.nil?
+                    puts " You have not selected a valid trip".red
+                else
+                    @@trip_counter = stations.size
+                    print " You must travel through the following stops on "
+                    puts " #{start_line.name}".red.on_yellow
+                    puts " #{stations.join(', ').green}.\n"
+                    puts Render.stops @@trip_counter
+                end
             else
-                p start_line.stations[end_index..start_index].reverse
-                @@trip_counter = start_line.stations[end_index..start_index].size
-                puts "This trip took #{@@trip_counter - 1} stops"
-
+                if stations.nil?
+                    puts " You have not selected a valid trip".red
+                else
+                    print " You must travel through the following stops on "
+                    puts " #{start_line.name}".red.on_yellow
+                    puts " #{stations.join(', ').green}.\n"
+                    puts Render.stops @@trip_counter
+                end
             end
         else
             # start line journey to exchange point
@@ -50,21 +61,22 @@ class Travel
 
                 @@trip_counter =  (start_leg + end_leg).size
                 # return trip
-                puts start_leg.to_s.green
-                puts end_leg.to_s.red
-                puts "This trip took #{@@trip_counter - 1} stops"
-                trip = start_leg, end_leg
+                puts " You must travel through the following stops on #{start_line.name}\n#{start_leg.join(', ').green}.\n\n"
+                puts " Change at Union Square.\n".cyan
+                # check if journey terminates at union square
+                end_leg.empty? ? puts(" There are no further stops") : puts(" You must then travel through the following stops #{end_leg.join(', ').red}.")
+                puts Render.stops @@trip_counter
             else
                 start_leg = start_line.stations[start_line.change_point_index..start_index].reverse
                 end_leg = build_end_leg end_line, end_index
 
                 @@trip_counter =  (start_leg + end_leg).size
                 # return trip
-                puts "#{sl}, #{ss} - #{start_leg.to_s}".green
-                puts "#{el}, #{es} - #{end_leg.to_s}".red
-                puts "This trip took #{@@trip_counter - 1} stops"
-
-                trip = start_leg, end_leg
+                puts " You must travel through the following stops on #{start_line.name}\n#{start_leg.join(', ').green}.\n\n"
+                puts " Change at Union Square.\n".cyan
+                # check if journey terminates at union square
+                end_leg.empty? ? puts(" There are no further stops") : puts(" You must then travel through the following stops #{end_leg.join(', ').red}.")
+                puts Render.stops @@trip_counter
             end
         end
         # line_N.stations[line_N.stations.index('Times Square')..line_N.stations.index('Union Square')]
@@ -93,10 +105,11 @@ class Render
 
     def self.render_menu
         system 'clear'
+        puts  "                            WELCOME TO WDI 23 - MTA                          "
         puts  "┌───────────────────────────────────────────────────────────────────────────┐".white
         print "│".white
         print  "                                   Lines                                   ".black.on_light_white
-        puts "│".white
+        puts  "│".white
         puts  "├───┬───────────────────┬───┬──────────────────────┬───┬────────────────────┤".white
         # puts  "│ 1 │     Line N        │ 2 │       Line L         │ 3 │     Line 6         │".white
         print "│ 1 │"
@@ -199,6 +212,10 @@ class Render
         puts "                                CTRL-C To EXIT\n\n"
     end
 
+    def self.stops val
+        val == 2 ? "\n This trip will take you #{val - 1} stop" : "\nThis trip will take you #{val - 1} stops"
+    end
+
     def self.set_color color
         if color == "green"
             return "S".black.on_green
@@ -209,17 +226,17 @@ class Render
 
     def self.line_selection(journey)
         if journey == "start"
-            print "Please enter your origin line number: "
+            print " Please enter your origin line number: "
             @@start_line_number = gets.to_i
-            print "Please enter your origin station number: "
+            print " Please enter your origin station number: "
             @@start_station_number = gets.to_i
 
             # update menu
             render_menu
         elsif journey == "end"
-            print "Please enter your destination line number: "
+            print " Please enter your destination line number: "
             @@end_line_number = gets.to_i
-            print "Please enter your destination station number: "
+            print " Please enter your destination station number: "
             @@end_station_number = gets.to_i
 
             # update menu
@@ -230,9 +247,11 @@ class Render
     end
 
     def self.continue_trip
-        print "\npress any key to continue"
+        print "\n\n press any key to continue"
         STDIN.getch
         system "clear"
+
+        # reset class variables to clear menu
         @@start_line_number = 0
         @@start_station_number = 0
         @@end_line_number = 0
