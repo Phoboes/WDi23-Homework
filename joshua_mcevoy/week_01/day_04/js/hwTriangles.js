@@ -98,40 +98,22 @@
 
 // isObtuse - Returns whether the triangle is obtuse or not
 
-var triangle = {
-  sideA: 3,
-  sideB: 4,
-  sideC: 5
-};
 
-const isObtuse = function (shape) {
-let array = [triangle.sideA, triangle.sideB, triangle.sideC];
-let num1 = 0;
-let num2 = 100000;
-let largestNumber = "";
-let smallestNumber = "";
-let middleNumber = "";
 
-for (let i = 0; i < array.length; i++){
-  if (array[i] > num1){
-    largestNumber = array[i];
-    console.log( `largestNumber = ${largestNumber}`);
+const isObtuse = function (sideA, sideB , sideC) {
+  //change arguments to int and order ascending
+  let array = [sideA, sideB, sideC];
+  let sortedArray = array.sort();
+
+  if ( (parseInt(sortedArray[0]) + parseInt(sortedArray[1])) > parseInt(sortedArray[2])){
+    console.log(`This is an obtuse triangle.`);
+    return true;
   }
-  if (array[i] < num2){
-    smallestNumber = array[i];
-    console.log( `smallestNumber = ${smallestNumber}`);
+  else {
+    console.log(`This is not a triangle.`);
+    return false;
   }
-  if ()
+  };
 
-}
-//////////// have to order sides in size then allocate to correct area
 
-  // if (smallestNumber * smallestNumber)+(triangle.sideB * triangle.sideB) > (largestNumber * largestNumber){
-  //   console.log("This is acute triangle");
-  // }
-  // else {
-  //   console.log("This triangle is being obtuse");
-  // }
-};
-
-isObtuse(triangle);
+isObtuse('5', '4', '3');
