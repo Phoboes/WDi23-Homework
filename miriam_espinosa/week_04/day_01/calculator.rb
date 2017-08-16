@@ -15,11 +15,7 @@ def get_user_choice
 
   print "Enter selection:"
   gets.downcase.chomp #implicit return
-  # print "First number:"
-  # $a = gets.chomp.to_i
-  # print "Second number:"
-  # $b = gets.chomp.to_i
-
+  
 end
 
 
