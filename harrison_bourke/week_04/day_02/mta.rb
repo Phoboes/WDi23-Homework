@@ -16,9 +16,9 @@ def plan_trip (starting_line, starting_stop, ending_line, ending_stop)
 
     # Now check whech array is smaller and return that one
     if forward_trip.length < backward_trip.length
-      p forward_trip
+      output(forward_trip)
     else
-      p backward_trip
+      output(backward_trip)
     end
   else
     # First we'll figure out the first part of the trip, to Union Square. We'll do the same as we did with the sinle line part and do both ways.
