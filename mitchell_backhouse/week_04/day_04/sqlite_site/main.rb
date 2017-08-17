@@ -51,9 +51,17 @@ end
 
 # UPDATE
 post '/languages/:id' do
-    query_db "UPDATE languages SET logo='#{params["logo"]}', name='#{params["name"]}', creator='#{params["creator"]}', year_developed='#{params["year_developed"].to_i}', year_abandoned='#{params["year_abandoned"].to_i}', current_version='#{params["current_version"]}', description='#{params["description"]} WHERE id=#{params['id']}"
+    query_db "UPDATE languages SET
+    logo='#{params["logo"]}',
+    name='#{params["name"]}',
+    creator='#{params["creator"]}',
+    year_developed='#{params["year_developed"].to_i}',
+    year_abandoned='#{params["year_abandoned"].to_i}',
+    current_version='#{params["current_version"]}',
+    description='#{params["description"]}'
+    WHERE id=#{params["id"]}"
 
-    redirect to('/languages/#{params[:id]}')
+    redirect to("/languages/#{params[:id]}")
 end
 
 # DESTROY
@@ -63,7 +71,7 @@ get '/languages/:id/delete' do
 end
 
 get '/resetdb' do
-    query_db 
+    #query_db 
 end
 
 def query_db(sql)
