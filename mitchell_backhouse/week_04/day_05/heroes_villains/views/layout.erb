@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="/heroes">Heroes</a>
-        <a href="/villains">Villains</a>
-        <a href="/publishers">Publishers</a>
-    </nav>
+    <img src="/media/3d_element.gif" alt="" />
+    <div class="container">
+        <header>
+            <h1>Heroes And Villains</h1>
+        </header>
+        <nav>
+            <a href="/heroes" <%= "class=selected" if check_path.include?("heroes") %>>Heroes</a><a href="/villains" <%= "class=selected" if check_path.include?("villains") %>>Villains</a><a href="/publishers" <%= "class=selected" if check_path.include?("publishers") %>>Publishers</a>
+        </nav>
 
-    <%= yield %>
+        <%= yield %>
+        
+    </div>
     
 </body>
 </html>

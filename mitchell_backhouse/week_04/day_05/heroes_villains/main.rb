@@ -20,7 +20,6 @@ ActiveRecord::Base.establish_connection(
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
 
-
 # Routes
 # GENERAL
 get '/' do
@@ -57,9 +56,9 @@ end
 
 # SHOW
 get '/heroes/:id' do
-   @hero = Hero.find params[:id] 
+    @hero = Hero.find params[:id]
 
-   erb :heroes_show 
+    erb :heroes_show
 end
 
 # CREATE
@@ -90,11 +89,17 @@ end
 get '/heroes/:id/delete' do
     hero = Hero.find params[:id]
     hero.destroy
-    
+
     redirect to('/heroes')
 end
 
 # only required in Sinatra to close connection
 after do
     ActiveRecord::Base.connection.close
+end
+
+helpers do
+    def check_path
+        request.path_info
+    end
 end

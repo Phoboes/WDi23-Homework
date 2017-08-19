@@ -25,11 +25,13 @@
         <option value="10"<%= "selected" if @hero.rating == 10 %>>10</option>
     </select>
 
+    <br />
     <label for="publisher">Publisher</label>
     <select id="publisher" name="publisher_id" >
-        <option value="1"><%= @publishers[0].name %></option>
-        <option value="2"><%= @publishers[1].name %></option>
+        <option value="1"<%= "selected" if @hero.publisher_id == 1 %>><%= @publishers[0].name %></option>
+        <option value="2"<%= "selected" if @hero.publisher_id == 2 %>><%= @publishers[1].name %></option>
     </select>
+    <br />
     <button>Update HERO</button>
 
 </form>
