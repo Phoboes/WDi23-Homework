@@ -1,18 +1,19 @@
-<h2>HEROES INDEX</h2>
 
 <table>
     <tr>
-        <th>Hero</th>
-        <th>Publisher</th>
+        <th width="250px">Hero</th>
+        <th width="250px">Rating</th>
+        <th width="250px">Publisher</th>
     </tr>
 
 <% @heroes.each do |hero| %>
     <tr>
         <td><a href="/heroes/<%= hero.id %>"><%= hero.name %></a></td>
+        <td><%= print_rating hero.rating %></td>
         <td><%= hero.publisher_name %></td>
     </tr>
 <% end %>
 
 </table>
-<a href="/heroes/new">New Hero</a>
+<a href="/heroes/new" class="charNew" >New Hero</a>
 

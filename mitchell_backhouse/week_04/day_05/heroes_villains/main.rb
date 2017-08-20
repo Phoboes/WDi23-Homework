@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
+require 'active_support/core_ext/string/output_safety'
 require 'sqlite3'
 #
 # require all models
@@ -93,6 +94,53 @@ get '/heroes/:id/delete' do
     redirect to('/heroes')
 end
 
+# VILLAINS ROUTES
+
+get '/villains/new' do
+    @publishers = Publisher.all
+
+    erb :villains_new
+end
+
+# SHOW
+get '/villains/:id' do
+    @villain = Villain.find params[:id]
+
+    erb :villains_show
+end
+
+# CREATE
+post '/villains' do
+    puts params
+    villain = Villain.create name: params[:name], description: params[:description], powers: params[:powers], rating: params[:rating], publisher_id: params[:publisher_id]
+
+    redirect to("/villains/#{villain.id}")
+end
+
+# UPDATE
+post '/villains/:id' do
+    villain = Villain.find params[:id]
+    villain.update name: params[:name], description: params[:description], powers: params[:powers], rating: params[:rating], publisher_id: params[:publisher_id]
+
+    redirect to("/villains/#{villain.id}")
+end
+
+# EDIT
+get '/villains/:id/edit' do
+    @villain = Villain.find params[:id]
+    @publishers = Publisher.all
+
+    erb :villains_edit
+end
+
+# DESTROY
+get '/villains/:id/delete' do
+    villain = Villain.find params[:id]
+    villain.destroy
+
+    redirect to('/villains')
+end
+
 # only required in Sinatra to close connection
 after do
     ActiveRecord::Base.connection.close
@@ -101,5 +149,11 @@ end
 helpers do
     def check_path
         request.path_info
+    end
+
+    def print_rating(rating)
+        str = ""
+        rating.times { str << "★" }
+        str
     end
 end

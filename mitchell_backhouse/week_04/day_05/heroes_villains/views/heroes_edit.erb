@@ -1,5 +1,4 @@
-<h3>Heroes EDIT</h3>
-
+<h2>Edit Hero</h2>
 <form action="/heroes/<%= @hero.id %>" method="POST">
     <label for="name">Name</label>
     <input type="text" name="name" value="<%= @hero.name %>">
@@ -32,6 +31,6 @@
         <option value="2"<%= "selected" if @hero.publisher_id == 2 %>><%= @publishers[1].name %></option>
     </select>
     <br />
-    <button>Update HERO</button>
+    <button class="charNew">Update HERO</button>
 
 </form>

@@ -1,5 +1,4 @@
 class Publisher < ActiveRecord::Base
-
     def heroes
         Hero.all.where(publisher_id: self.id)
     end
