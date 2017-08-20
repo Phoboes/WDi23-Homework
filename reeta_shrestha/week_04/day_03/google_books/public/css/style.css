@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Slabo 27px', serif;
+  width: 100%;
+  height: 100%;
+}
+#app {
+  margin-top: 15%;
+  background-color: #f2f2f2;
+  padding: 30px;
+  display: block;
+  width: 40%;
+
+}
+#app * {
+  color: red;
+  margin: 20px;
+}
+
+img {
+  display: float;
+  float: right;
+}
+input {
+  padding: 20px;
+  width: 200px;
+}
+button {
+  width: 30%;
+  padding: 20px;
+
+  display: block;
+}
