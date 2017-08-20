@@ -1,0 +1,20 @@
+<feature-wrap>
+  <show>
+    <h2>Name</h2> <p><%= @seed['name'] %>
+    </p>
+    <h2>Color</h2> <p><%= @seed['color'] %>
+    </p>
+    <h2>Description</h2> <p><%= @seed['interest'] %>
+    </p>
+  </show>
+
+  <content>
+    <img class='feature' src="<%= @seed['image'] %>"/>
+  </content>
+
+</feature-wrap>
+
+<footer-nav>
+  <a href="/seeds/<%= @seed['id'] %>/edit">Edit</a>
+  <a href="/seeds/<%= @seed['id'] %>/delete">Delete</a>
+  <footer-nav>
