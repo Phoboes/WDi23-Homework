@@ -2,7 +2,7 @@
 <div class="charRating"><span>RATING:</span><%= print_rating(@hero.rating)%></div>
 <div class="charEdit"><a href="/heroes/<%= @hero.id %>/edit">Edit Hero</a></div> 
 
-<div class="charPublisher">PUBLISHED BY: <%= @hero.publisher_name %></div>
+<div class="charPublisher">PUBLISHED BY: <%= @hero.publisher.name %></div>
 
 <div class="charDescription">
     <span>Description</span>

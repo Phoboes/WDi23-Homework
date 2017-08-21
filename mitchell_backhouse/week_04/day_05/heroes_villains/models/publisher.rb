@@ -1,9 +1,4 @@
 class Publisher < ActiveRecord::Base
-    def heroes
-        Hero.all.where(publisher_id: self.id)
-    end
-
-    def villains
-        Villain.all.where(publisher_id: self.id)
-    end
+    has_many :heroes
+    has_many :villains
 end

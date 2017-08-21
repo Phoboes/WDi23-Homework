@@ -10,7 +10,7 @@
     <tr>
         <td><a href="/heroes/<%= hero.id %>"><%= hero.name %></a></td>
         <td><%= print_rating hero.rating %></td>
-        <td><%= hero.publisher_name %></td>
+        <td><%= hero.publisher.name %></td>
     </tr>
 <% end %>
 
