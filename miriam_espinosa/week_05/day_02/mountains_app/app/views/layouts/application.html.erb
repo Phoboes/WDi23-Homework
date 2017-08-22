@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+
+      <nav>
+        <%= link_to "All mountains", mountains_path %>
+        <%= link_to "New mountain", mountain_new_path %>
+      </nav>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
