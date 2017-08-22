@@ -42,6 +42,8 @@ def single_trip (line, stop_in, stop_out)
   stop_out_position = $subway[line].index stop_out
   direction = stop_out_position - stop_in_position
 
+
+
   if direction > 0
 
     i = stop_in_position+1
@@ -59,7 +61,9 @@ def single_trip (line, stop_in, stop_out)
 
       i-= 1
     end
+
   end
+
 end
 
 def full_trip
@@ -74,20 +78,16 @@ def full_trip
 
   if line_in == line_out
 
-    print "You must travel through the following stops on the #{line_in} line:"
     puts single_trip(line_in, stop_in, stop_out)
 
   else
 
-    print "You must travel through the following stops on the #{line_in} line: "
     puts single_trip(line_in, stop_in, "Union Square")
-    print $my_trip
-    $my_trip = []
-    print ", change at Union Square. Your journey continues through the following stops:"
     puts single_trip(line_out, "Union Square", stop_out)
   end
+
 puts $my_trip
 end
 
 
-print full_trip
+puts full_trip
