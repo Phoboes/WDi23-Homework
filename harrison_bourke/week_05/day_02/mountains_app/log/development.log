@@ -1,0 +1,855 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20170822050233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "image" text, "country" text, "elevation" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170822050233"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-22 05:13:53.803105"], ["updated_at", "2017-08-22 05:13:53.803105"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mountain"], ["image", "https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjHttThierVAhUB9WMKHZssC_gQjRwIBw&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMount_Everest&psig=AFQjCNH6sKjEj0-a3PpcZz8vdepdk4IJQw&ust=1503465011716173"], ["country", "Nepal"], ["elevation", 8848], ["created_at", "2017-08-22 05:16:27.021331"], ["updated_at", "2017-08-22 05:16:27.021331"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg"], ["country", "Pakistan"], ["elevation", 8611], ["created_at", "2017-08-22 05:16:27.034746"], ["updated_at", "2017-08-22 05:16:27.034746"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kosciuszko"], ["image", "http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg"], ["country", "Australia"], ["elevation", 2228], ["created_at", "2017-08-22 05:16:27.048843"], ["updated_at", "2017-08-22 05:16:27.048843"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:20:37 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/harrison/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/harrison/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:20:44 +1000
+Processing by MountainsController#index as HTML
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template mountains/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/Harrison Bourke/Desktop/uni/General_Assembly/Projects/WDi23-Homework/harrison_bourke/week_05/day_02/mountains_app/app/views"
+):
+  
+app/controllers/mountains_controller.rb:6:in `index'
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:21:20 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 464ms (Views: 454.9ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:22:36 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 92ms (Views: 91.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:25:03 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 90ms (Views: 79.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:25:05 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:25:11 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/mountains/new"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:25:33 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 72ms (Views: 63.4ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:28:19 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 69ms (Views: 61.4ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:29:04 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 72ms (Views: 64.5ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:29:39 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 62.0ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:31:37 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 64.1ms)
+
+
+Started POST "/mountains" for 127.0.0.1 at 2017-08-22 15:32:11 +1000
+Processing by MountainsController#create as HTML
+  Parameters: {"name"=>"Mont Blanc", "image"=>"", "country"=>"France", "elevation"=>"4810"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/mountains" for 127.0.0.1 at 2017-08-22 15:38:16 +1000
+Processing by MountainsController#create as HTML
+  Parameters: {"name"=>"Mont Blanc", "image"=>"", "country"=>"France", "elevation"=>"4810"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mont Blanc"], ["image", ""], ["country", "France"], ["elevation", 4810], ["created_at", "2017-08-22 05:38:16.666372"], ["updated_at", "2017-08-22 05:38:16.666372"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 37ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:38:16 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.7ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:41:52 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 86ms (Views: 74.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:42:47 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (117.3ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `mountain' for #<#<Class:0x007ff250056cd0>:0x007ff24164be38>
+Did you mean?  mountain_url):
+    2: 
+    3: <ul>
+    4:   <% @mountains.each do |mountain| %>
+    5:     <li><%= link_to mountain.name, mountain(mountain.id) %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/mountains/index.html.erb:5:in `block in _app_views_mountains_index_html_erb__3317735460826117352_70339227964800'
+app/views/mountains/index.html.erb:4:in `_app_views_mountains_index_html_erb__3317735460826117352_70339227964800'
+app/controllers/mountains_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20170822050233)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "mountains"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170822050233"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20170822050233)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "image" text, "country" text, "elevation" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170822050233"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mountain"], ["image", "https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjHttThierVAhUB9WMKHZssC_gQjRwIBw&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMount_Everest&psig=AFQjCNH6sKjEj0-a3PpcZz8vdepdk4IJQw&ust=1503465011716173"], ["country", "Nepal"], ["elevation", 8848], ["created_at", "2017-08-22 05:44:11.780969"], ["updated_at", "2017-08-22 05:44:11.780969"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg"], ["country", "Pakistan"], ["elevation", 8611], ["created_at", "2017-08-22 05:44:11.795925"], ["updated_at", "2017-08-22 05:44:11.795925"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kosciuszko"], ["image", "http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg"], ["country", "Australia"], ["elevation", 2228], ["created_at", "2017-08-22 05:44:11.812226"], ["updated_at", "2017-08-22 05:44:11.812226"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:44:38 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (109.7ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `mountain' for #<#<Class:0x00000003aca8e8>:0x00000003a9ad00>
+Did you mean?  mountain_url):
+    2: 
+    3: <ul>
+    4:   <% @mountains.each do |mountain| %>
+    5:     <li><%= link_to mountain.name, mountain(mountain.id) %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/mountains/index.html.erb:5:in `block in _app_views_mountains_index_html_erb___4506445477615223966_30507600'
+app/views/mountains/index.html.erb:4:in `_app_views_mountains_index_html_erb___4506445477615223966_30507600'
+app/controllers/mountains_controller.rb:6:in `index'
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:45:38 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 289ms (Views: 287.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2017-08-22 15:45:53 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.9ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 100ms (Views: 86.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 1]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 2]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 3]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["image", "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg"], ["country", "Nepal"], ["elevation", 8848], ["created_at", "2017-08-22 05:46:58.336930"], ["updated_at", "2017-08-22 05:46:58.336930"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg"], ["country", "Pakistan"], ["elevation", 8611], ["created_at", "2017-08-22 05:46:58.353108"], ["updated_at", "2017-08-22 05:46:58.353108"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Kosciuszko"], ["image", "http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg"], ["country", "Australia"], ["elevation", 2228], ["created_at", "2017-08-22 05:46:58.370011"], ["updated_at", "2017-08-22 05:46:58.370011"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/mountains/1" for 127.0.0.1 at 2017-08-22 15:47:08 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mountain with 'id'=1):
+  
+app/controllers/mountains_controller.rb:20:in `show'
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:47:13 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 281ms (Views: 279.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mountains/4" for 127.0.0.1 at 2017-08-22 15:47:15 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 74.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains/4" for 127.0.0.1 at 2017-08-22 15:49:49 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 88ms (Views: 67.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/mountains/4" for 127.0.0.1 at 2017-08-22 15:50:57 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (1.0ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 93ms (Views: 65.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/mountains/4/delete" for 127.0.0.1 at 2017-08-22 15:51:00 +1000
+Processing by MountainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xu178dELwt2n6AT6XqTfcUQNYYBenAOaT7KLWhRK6Kz70w0WH/FCZqZw+y7qRrEN7M40yZvGaqCUnglc8i3BSw==", "id"=>"4"}
+  [1m[36mMountain Load (1.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 4]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 31ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:51:01 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:52:26 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 83ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:52:29 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:52:30 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 15:52:33 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 72ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 15:53:45 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:01:42 +1000
+  
+ArgumentError (Invalid route name: 'mountain#edit'):
+  
+config/routes.rb:11:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:01:51 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 102ms (Views: 94.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:01:52 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:01:54 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Edit Mountain</h1>
+    2: 
+    3: <form action="<%= mountain_path(@mountain.id) %>" method="post">
+    4: 
+    5:   <label for="name">Mountain name: </label>
+    6:   <input type="text" name="name" id="name" value="<%= @mountain.name %>" required autofocus>
+  
+app/views/mountains/edit.html.erb:3:in `_app_views_mountains_edit_html_erb___2223282265250011705_69905258596280'
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:03:49 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `elevatiton' for #<Mountain:0x007f2820d4add8>
+Did you mean?  elevation
+               elevation?
+               elevation=):
+    12:   <input type="text" name="country" id="country" value="<%= @mountain.country %>">
+    13:   <br>
+    14:   <label for="elevation">Elevation: </label>
+    15:   <input type="number" name="element" id="element" value="<%= @mountain.elevatiton %>">
+    16: </form>
+  
+app/views/mountains/edit.html.erb:15:in `_app_views_mountains_edit_html_erb___2223282265250011705_69905163089600'
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 16:03:56 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:03:59 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:04:00 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:04:02 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.9ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `elevatiton' for #<Mountain:0x007f282c2333d0>
+Did you mean?  elevation
+               elevation?
+               elevation=):
+    12:   <input type="text" name="country" id="country" value="<%= @mountain.country %>">
+    13:   <br>
+    14:   <label for="elevation">Elevation: </label>
+    15:   <input type="number" name="element" id="element" value="<%= @mountain.elevatiton %>">
+    16: </form>
+  
+app/views/mountains/edit.html.erb:15:in `_app_views_mountains_edit_html_erb___2223282265250011705_69905257959600'
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:04:14 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 66.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:06:29 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 84ms (Views: 65.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:37 +1000
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "mountains" SET "name" = ?, "elevation" = ?, "updated_at" = ? WHERE "mountains"."id" = ?[0m  [["name", "Mount Kosciuszko Yeah!"], ["elevation", nil], ["updated_at", "2017-08-22 06:06:37.127406"], ["id", 6]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+No template found for MountainsController#update, rendering head :no_content
+Completed 204 No Content in 386ms (ActiveRecord: 13.2ms)
+
+
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:39 +1000
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:40 +1000
+No template found for MountainsController#update, rendering head :no_content
+Processing by MountainsController#update as HTML
+Completed 204 No Content in 386ms (ActiveRecord: 0.6ms)
+
+
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for MountainsController#update, rendering head :no_content
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:40 +1000
+Completed 204 No Content in 384ms (ActiveRecord: 0.8ms)
+
+
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:40 +1000
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by MountainsController#update as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (1.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:40 +1000
+No template found for MountainsController#update, rendering head :no_content
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:40 +1000
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by MountainsController#update as HTML
+Completed 204 No Content in 407ms (ActiveRecord: 0.7ms)
+
+
+Processing by MountainsController#update as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[36mMountain Load (0.7ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+No template found for MountainsController#update, rendering head :no_content
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:06:41 +1000
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Completed 204 No Content in 409ms (ActiveRecord: 1.3ms)
+
+
+Processing by MountainsController#update as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"2228", "id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+No template found for MountainsController#update, rendering head :no_content
+No template found for MountainsController#update, rendering head :no_content
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Completed 204 No Content in 788ms (ActiveRecord: 0.8ms)
+
+
+Completed 204 No Content in 785ms (ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for MountainsController#update, rendering head :no_content
+Completed 204 No Content in 906ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:07:20 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.7ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:07:56 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 68.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:00 +1000
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "element"=>"10000", "id"=>"6"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains/6
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:00 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:08:04 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:08:20 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:24 +1000
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko Yeah!", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "elevation"=>"1999", "id"=>"6"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "mountains" SET "elevation" = ?, "updated_at" = ? WHERE "mountains"."id" = ?[0m  [["elevation", 1999], ["updated_at", "2017-08-22 06:08:24.362399"], ["id", 6]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains/6
+Completed 302 Found in 29ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:24 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/6/edit" for 127.0.0.1 at 2017-08-22 16:08:27 +1000
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:33 +1000
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mount Kosciuszko", "image"=>"http://www.ozbc.net/images/kosciuszko/nsw_koz1.jpg", "country"=>"Australia", "elevation"=>"1999", "id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE "mountains" SET "name" = ?, "updated_at" = ? WHERE "mountains"."id" = ?[0m  [["name", "Mount Kosciuszko"], ["updated_at", "2017-08-22 06:08:33.110261"], ["id", 6]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains/6
+Completed 302 Found in 25ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:08:33 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:08:36 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/5" for 127.0.0.1 at 2017-08-22 16:08:37 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/mountains/5/delete" for 127.0.0.1 at 2017-08-22 16:08:41 +1000
+Processing by MountainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uKvwttWxDuWKyD14d3OlbrOWXwcK7c+6mNewoBvTo9Jl57vjwblxNkZqp1ZwvszYPywS3c8B8W2MYK75pzEYtw==", "id"=>"5"}
+  [1m[36mMountain Load (0.7ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 5]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 19ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:08:41 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 16:08:43 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 80ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mountains" for 127.0.0.1 at 2017-08-22 16:08:55 +1000
+Processing by MountainsController#create as HTML
+  Parameters: {"name"=>"Mount Everest", "image"=>"", "country"=>"Nepal", "elevation"=>"8861"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "image", "country", "elevation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["image", ""], ["country", "Nepal"], ["elevation", 8861], ["created_at", "2017-08-22 06:08:55.503101"], ["updated_at", "2017-08-22 06:08:55.503101"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 20ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:08:55 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2017-08-22 16:09:12 +1000
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains/6" for 127.0.0.1 at 2017-08-22 16:09:14 +1000
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMountain Load (0.6ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2017-08-22 16:09:17 +1000
+Processing by MountainsController#new as HTML
+  Rendering mountains/new.html.erb within layouts/application
+  Rendered mountains/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
