@@ -1,0 +1,11 @@
+<h1><%= @car.make %></h1>
+<div class="textImg">
+  <%= image_tag @car.image if @car.image %>
+  <p>
+    <span>CATEGORY: </span><%= @car.category %><br />
+    <span>Horsepower: </span><%= @car.hp %><br />
+    <span>Torque(NM): </span><%= @car.tq %><br />
+  </p>
+</div>
+
+
