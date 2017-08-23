@@ -7105,3 +7105,12 @@ app/views/cars/new.html.erb:3:in `_app_views_cars_new_html_erb___136419968800606
 [INFO ] [30m  Rendered [1mmanufacturers/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.6ms[0m
 [INFO ] [30m  Rendered [1mlayouts/_breadcrumb.html.erb[0m[0m [30m1.1ms[0m
 [INFO ] Completed [32m200 OK[0m in 51ms [30m(Views: 48.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/manufacturers/honda" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 22:57:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mManufacturersController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"honda"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT  "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."slug" = ? ORDER BY "manufacturers"."id" ASC LIMIT ?[0m  [["slug", "honda"], ["LIMIT", 1]]
+[INFO ]   Rendering manufacturers/show.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."manufacturer_id" = ?[0m  [["manufacturer_id", 1]]
+[INFO ] [30m  Rendered [1mmanufacturers/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.9ms[0m
+[INFO ] [30m  Rendered [1mlayouts/_breadcrumb.html.erb[0m[0m [30m0.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 23ms [30m(Views: 20.9ms | ActiveRecord: 0.4ms)[0m
