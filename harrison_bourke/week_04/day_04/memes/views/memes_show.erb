@@ -1,0 +1,16 @@
+<h2><%= @meme['description'] %></h2>
+
+<img src="<%= @meme['image'] %>"/>
+
+<p>You have given this meme a rating of <%= @meme['rating'] %>/10</p>
+
+<% if @meme['dank'] == 0 %>
+  <p>This meme isn't dank, but still enjoyable.</p>
+<% else %>
+  <p>This meme is a dank meme! Nice!</p>
+<% end %>
+
+<div class="controls">
+  <a href="/memes/<%= @meme['id'] %>/delete">Delete</a>
+  <a href="/memes/<%= @meme['id'] %>/edit">Edit</a>
+</div>
