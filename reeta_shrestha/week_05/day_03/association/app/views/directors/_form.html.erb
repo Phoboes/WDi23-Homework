@@ -1,0 +1,17 @@
+<%= form_for @director do |f| %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :image %>
+  <%= f.url_field :image %>
+</fieldset>
+
+<fieldset>
+  <label></label>
+  <%= f.submit %>
+</fieldset>
+
+<% end %>
