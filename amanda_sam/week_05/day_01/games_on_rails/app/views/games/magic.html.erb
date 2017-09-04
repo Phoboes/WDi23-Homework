@@ -1,0 +1,9 @@
+<h1>Magic 8 Ball</h1>
+
+<p><%= @shake %></p>
+
+<form action="/games/magic/response" method="get">
+  <label>Ask the Magic 8 Ball A Question</label>
+  <input name="q" type="text" />
+  <input type="submit" value="Shake the ball" />
+</form>
