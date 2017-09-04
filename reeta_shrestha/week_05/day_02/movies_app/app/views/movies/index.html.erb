@@ -1,0 +1,11 @@
+<h1>Movies Index</h1>
+
+<ul>
+<% @movies.each do |movie| %>
+  <li>
+    <%= link_to(movie.title, movie_path(movie.id)) %>
+    <%= link_to(movie.image, movie_path(movie.id)) %>
+    <p><%= truncate(movie.synopsis, :length =>50)%></p>
+  </li>
+<% end %>
+</ul>

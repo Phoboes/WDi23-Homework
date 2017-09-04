@@ -1,0 +1,15 @@
+<h2>Edit Seeds</h2>
+
+<form action="/seeds/<%= @seed['id'] %>" method="post">
+
+  <input type="text" name="name" value="<%= @seed['name'] %>" placeholder="Name of the Seed" required/>
+
+  <input type="text" name="color" value="<%= @seed['color'] %>" placeholder="Seeds Color"/>
+
+  <input type="url" name="image" value="<%= @seed['image'] %>" placeholder="https://"/>
+
+  <input type="text" name="interest" value="<%= @seed['interest'] %>" placeholder="Likable, Y/N"/>
+
+  <button>Update Seed</button>
+
+</form>
