@@ -3,11 +3,6 @@
 // Are there ways to refactor your code to make it DRYer?
 
 
-
-
-
-
-
 //logic code
 const bank = {
   checking: 0,
@@ -88,10 +83,12 @@ const render = function (account) {
   //All DOM updating code here
   //if account is $0 display red else green
   if($('#checking-balance').text() === '$0.00'){
+    //add class .zero
     $('#checkingBordered').css('background-color', '#FFD2D5');
     $('#checkingExpandButton').css('background-color', '#FFD2D5');
   }
   else {
+    //remove class .zero
     $('#checkingBordered').css('background-color', '#E3E2E5');
     $('#checkingExpandButton').css('background-color', '#E3E2E5');
   }
