@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: rgb(224, 125, 214);
+}
+
+ .container {
+  max-width: 960px;
+  background-color: white;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+h1 {
+  color: purple;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+}
+.artworksalign {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.artworksalign img {
+  /*max-width: 30%;*/
+  height: 250px;
+  margin: 10px auto;
+}
+
+.feature {
+  display: block;
+  border-radius: 0.5em;
+  max-width: 100%;
+}
+
+nav {
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+a {
+  padding: 3px;
+  color: rgb(177, 30, 158);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(224, 125, 214);
+  color: white;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Database of Artworks</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/artists">All Artists</a>
+        <a href="/artists/new">New Artist</a>
+        |
+        <a href="/artworks">All Artworks</a>
+        <a href="/artworks/new">New Artworks</a>
+      </nav>
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background-color: rgb(247, 233, 255);
+  margin: 0;
+  padding: 50px;
+  max-width: 960px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.home {
+  text-align: center;
+}
+
+span {
+  font-size: 100px;
+  text-shadow:
+}
+
+#P {
+  color: rgb(0, 97, 255);
+}
+
+#L {
+  color: rgb(255, 0, 223);
+}
+
+#A {
+  color: rgb(150, 0, 255);
+}
+
+#Y {
+  color: rgb(0, 97, 255);
+}
+
+.homenav {
+  color: rgb(230, 121, 247);
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.homenav:hover {
+  color: rgb(142, 9, 158);
+  background-color: rgba(245, 191, 251, 0.53);
+  box-shadow: 5px 5px 5px rgb(244, 23, 226);
+  font-size: 40px;
+  transition: 0.3s;
+}
+
+.numbers {
+  font-size: 50px;
+  padding:30px;
+  text-decoration: none;
+  color: rgb(142, 9, 158);
+}
+
+.numbers:hover {
+  background-color: rgba(192, 43, 244, 0.4)
+}
+
+p {
+  font-size: 20px;
+}
+
+nav {
+  background-color: rgba(223, 185, 245, 1);
+  padding: 5px;
+  margin-bottom: 70px;
+  width: auto;
+}
+#mainnav {
+  margin-left: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+#mainnav:hover {
+  background-color: white;
+  padding:20px;
+  transition: 0.3s;
+  box-shadow: 10px 10px 5px rgb(244, 23, 226);
+}
+
+#answer {
+  font-size: 70px;
+  text-align: center;
+}
+
+#secretnumber {
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 50px;
+  font-size: 50px;
+}
+
+#secretnumberanswer {
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 50px;
+  font-size: 100px;
+  color: rgb(142, 9, 158);
+}
+
+.rockpaperscissors {
+  text-align: center;
+}
+
+.choice {
+  font-weight: 800;
+  font-size: 40px;
+  color: rgb(142, 9, 158);
+  padding: 10px;
+}
