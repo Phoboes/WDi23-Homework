@@ -34,6 +34,12 @@ const bookSearch = function(search) {
 
     $('.bookList').append(image);
     //document.body.appendChild(image);
+
+    $('.bookList img').on('click', function() {
+      $(this).fadeOut('slow', function() {
+        $(this).remove(); 
+      });
+    });
   }
 
 
@@ -46,6 +52,7 @@ $(document).ready( function () {
 
   const button = document.getElementById('booksearch');
   button.addEventListener('click', bookSearch);
+
 });
 
 
