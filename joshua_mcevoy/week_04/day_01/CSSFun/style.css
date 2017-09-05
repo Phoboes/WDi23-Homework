@@ -1,0 +1,32 @@
+.container {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+.container:active{
+  
+}
+
+.container div {
+  height: 9px;
+  width: 100px;
+  background-color: white;
+}
+
+
+
+@@keyframes .container div {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 25px;
+  }
+  50% {
+    width: 50px;
+  }
+  100% {
+    width: 100px;
+  }
+}

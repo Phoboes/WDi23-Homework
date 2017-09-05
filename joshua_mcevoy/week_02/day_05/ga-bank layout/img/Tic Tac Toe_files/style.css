@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#scoreContainerPlayerOne {
+  margin-left: 98px;
+}
+
+#scoreContainerPlayerTwo {
+  margin-left: 26px;
+}
+
+#squareOne {
+  position: absolute;
+  top: 90px;
+  right: 699px;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareTwo {
+  position: absolute;
+  top: 90px;
+  right: 591px;
+  border-left: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareThree {
+  position: absolute;
+  top: 90px;
+  right: 491px;
+  border-left: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareFour {
+  position: absolute;
+  top: 190px;
+  right: 699px;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareFive {
+  position: absolute;
+  top: 190px;
+  right: 591px;
+  border: solid 8px #5491BF;
+}
+
+#squareSix {
+  position: absolute;
+  top: 190px;
+  right: 491px;
+  border-top: solid 8px #5491BF;
+  border-left: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareSeven {
+  position: absolute;
+  top: 298px;
+  right: 699px;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+}
+
+#squareEight {
+  position: absolute;
+  top: 298px;
+  right: 591px;
+  border-left: solid 8px #5491BF;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+}
+
+#squareNine {
+  position: absolute;
+  top: 298px;
+  right: 491px;
+  border-left: solid 8px #5491BF;
+  border-top: solid 8px #5491BF;
+}
+
+.container {
+  max-width: 587px;
+  min-height: 458px;
+  margin: 0 auto;
+  /*background-color: #70C2FF;*/
+}
+
+.cross {
+  background-color: red;
+}
+
+.gameBoard {
+  min-width: 400px;
+  min-height: 337px;
+  background-color: #63ABE0;
+}
+
+.naught {
+  background-color: black;
+}
+
+.score {
+  vertical-align: middle;
+  display: inline-block;
+  min-width: 170px;
+  min-height: 35px;
+  margin-top: 18px;
+  box-shadow: 0px 0px 3px #7D7D7D;
+  background-color: white;
+  text-align: center;
+}
+
+.scoreContainer {
+  min-width: 100%;
+  min-height: 72px;
+  background-color: #F5F5F5;
+  /*margin: 0 auto;*/
+  display: inline-block;
+}
+
+.square {
+  /*border: solid 1px black;*/
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /*margin: 10px;*/
+}
+
+
+
+
+
+
+
+/*start of cross icon*/
+#crossIcon {
+  width: 100px;
+  height: 100px;
+  /*visibility: hidden;*/
+  position: relative;
+  /*margin: 0px auto;*/
+  /*cursor: pointer;*/
+}
+
+#crossIcon span {
+  display: block;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 48px;
+  height: 9px;
+  width: 70px;
+  background: #545454;
+  border-radius: 9px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .8s ease-in-out;
+  -moz-transition: .8s ease-in-out;
+  -o-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-animation-name: expand;
+  -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes expand {
+    0%{
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100%{
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg);
+    }
+}
+
+#crossIcon.expand span:nth-child(1){
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+#crossIcon.expand span:nth-child(2){
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  -o-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
+
+/*end of cross icon*/
+
+/*start of circle icon*/
+.wrap{
+  /*margin: 100px auto;*/
+  width: 100px;
+  /*height: 100px;*/
+}
+
+.circle{
+  position: relative;
+  /*overflow: hidden;*/
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 9px #545454;
+  /*cursor: pointer;*/
+}
+
+.circle.flash{
+  animation: circle .8s ease 1 forwards;
+}
+
+/*#F2EBD3;*/
+
+@keyframes circle{
+  25% {
+    box-shadow: 0 0 0 6px #545454;
+  }
+  50% {
+    box-shadow: 0 0 0 9px #545454;
+  }
+  75% {
+    box-shadow: 0 0 0 6px #545454;
+  }
+  100% {
+    box-shadow: 0 0 0 9px #545454;
+  }
+}

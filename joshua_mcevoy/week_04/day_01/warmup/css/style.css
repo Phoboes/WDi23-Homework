@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+
+.word {
+  font-family: Georgia, serif;
+  font-size: 60pt;
+  color: white;
+  position: absolute;
+}
