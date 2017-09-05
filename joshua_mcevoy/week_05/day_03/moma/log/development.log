@@ -1,0 +1,261 @@
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] Migrating to CreateArtists (20170823004421)
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "period" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823004421"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Migrating to CreateWorks (20170823041500)
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "year" text, "medium" text, "style" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823041500"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-23 05:06:03.469893"], ["updated_at", "2017-08-23 05:06:03.469893"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:06:34 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m4.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 9.9ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:06:39 +1000[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m2.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 10ms [30m(Views: 6.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artist" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:06:43 +1000[0m
+[[41m[37mFATAL[0m[0m] [31mActionController::RoutingError (No route matches [GET] "/artist"):[0m
+[[41m[37mFATAL[0m[0m] [31mactionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:06:50 +1000[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/MacEnroy/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m4.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 10ms [30m(Views: 7.3ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:07:44 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering artists/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[INFO ] [30m  Rendered [1martists/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m4.1ms[0m
+[INFO ] Completed [32m200 OK[0m in [31m1085ms[0m [30m(Views: 1062.1ms | ActiveRecord: 1.0ms)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joan Miro"], ["nationality", "Spanish"], ["dob", "1893-04-20"], ["period", "20th century"], ["image", "http://upload.wikimedia.org/wikipedia/commons/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg"], ["created_at", "2017-08-23 05:10:01.567247"], ["updated_at", "2017-08-23 05:10:01.567247"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Flight of the Dragonfly in Front of the Sun"], ["year", "1968"], ["medium", "oil on canvas"], ["style", "Abstract Art"], ["image", "https://uploads0.wikiart.org/images/joan-miro/the-flight-of-the-dragonfly-in-front-of-the-sun.jpg"], ["created_at", "2017-08-23 05:10:01.593766"], ["updated_at", "2017-08-23 05:10:01.593766"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:10:49 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering artists/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[INFO ] [30m  Rendered [1martists/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m21.3ms[0m
+[INFO ] Completed [32m200 OK[0m in [33m337ms[0m [30m(Views: 310.5ms | ActiveRecord: 4.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:26:10 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering artists/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[INFO ] [30m  Rendered [1martists/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m18.7ms[0m
+[INFO ] Completed [32m200 OK[0m in [33m310ms[0m [30m(Views: 288.6ms | ActiveRecord: 1.8ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 15:26:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#index[0m as [33mHTML[0m
+[INFO ]   Rendering works/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[INFO ] [30m  Rendered [1mworks/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m11.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 42ms [30m(Views: 31.4ms | ActiveRecord: 1.6ms)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] Migrating to AddArtistIdToWorks (20170823060501)
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "works" ADD "artist_id" integer[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823060501"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:07:05 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#index[0m as [33mHTML[0m
+[INFO ]   Rendering works/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[INFO ] [30m  Rendered [1mworks/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m15.8ms[0m
+[INFO ] Completed [32m200 OK[0m in [33m279ms[0m [30m(Views: 259.6ms | ActiveRecord: 0.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:07:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering artists/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1martists/_form.html.erb[0m[0m [30m21.8ms[0m
+[INFO ] [30m  Rendered [1martists/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m24.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 84ms [30m(Views: 49.6ms | ActiveRecord: 1.8ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:08:48 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#index[0m as [33mHTML[0m
+[INFO ]   Rendering works/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[INFO ] [30m  Rendered [1mworks/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 49ms [30m(Views: 41.6ms | ActiveRecord: 1.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:08:49 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#new[0m as [33mHTML[0m
+[INFO ]   Rendering works/new.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.4ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+[INFO ] [30m  Rendered [1mworks/_form.html.erb[0m[0m [30m8.5ms[0m
+[INFO ] [30m  Rendered [1mworks/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m12.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 45ms [30m(Views: 41.3ms | ActiveRecord: 0.4ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:09:06 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering artists/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1martists/_form.html.erb[0m[0m [30m2.9ms[0m
+[INFO ] [30m  Rendered [1martists/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m7.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 46ms [30m(Views: 34.1ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/artists" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oyi2Z/YOrPKW6bo5uV5I3CFzzkGeKGe1On0L/ajPr1neEm4SIRMVqGtAfVTRn4Mu55n0H3IsqOrVccwtYXPQgw==", "artist"=>{"name"=>"Some dude", "nationality"=>"something", "dob"=>"2-2-1986", "period"=>"", "image"=>""}, "commit"=>"Create Artist"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Some dude"], ["nationality", "something"], ["dob", "1986-02-02"], ["period", ""], ["image", ""], ["created_at", "2017-08-23 06:11:12.932946"], ["updated_at", "2017-08-23 06:11:12.932946"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/artists/2
+[INFO ] Completed [32m302 Found[0m in 55ms [30m(ActiveRecord: 10.4ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering artists/show.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = ?[0m  [["artist_id", 2]]
+[INFO ] [30m  Rendered [1martists/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m22.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 55ms [30m(Views: 48.3ms | ActiveRecord: 0.6ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#index[0m as [33mHTML[0m
+[INFO ]   Rendering works/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[INFO ] [30m  Rendered [1mworks/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 29.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:18 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#new[0m as [33mHTML[0m
+[INFO ]   Rendering works/new.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+[INFO ] [30m  Rendered [1mworks/_form.html.erb[0m[0m [30m4.7ms[0m
+[INFO ] [30m  Rendered [1mworks/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m10.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 48ms [30m(Views: 42.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/works" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:48 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+xxE1ZdDeMqLXTAeH1Nragc5BdVkPFuXXdl41VzvkvQFdhbIjkRP5NGBepeTkzJigKbBhSBr1GXeWjGbXRCz2g==", "work"=>{"title"=>"some crap", "year"=>"1998", "medium"=>"paint", "style"=>"craptastic", "image"=>"", "artist_id"=>"2"}, "commit"=>"Create Work"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "some crap"], ["year", "1998"], ["medium", "paint"], ["style", "craptastic"], ["image", ""], ["created_at", "2017-08-23 06:11:48.106124"], ["updated_at", "2017-08-23 06:11:48.106124"], ["artist_id", 2]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/works/2
+[INFO ] Completed [32m302 Found[0m in 20ms [30m(ActiveRecord: 4.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:48 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering works/show.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ] [30m  Rendered [1mworks/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.8ms | ActiveRecord: 0.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:11:59 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering artists/show.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = ?[0m  [["artist_id", 2]]
+[INFO ] [30m  Rendered [1martists/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 37ms [30m(Views: 31.6ms | ActiveRecord: 1.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/2/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:07 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering artists/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1martists/_form.html.erb[0m[0m [30m4.1ms[0m
+[INFO ] [30m  Rendered [1martists/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m9.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 40ms [30m(Views: 34.4ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/artists/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:10 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"BuGFD7j/ofhQlJLlMeQRrq2dFS/PhjKR2rH0pgXkooVUQPWAhVuek2K6ISaGne2WfnUjepAYzUaTqij/WZpqZQ==", "artist"=>{"name"=>"Some ", "nationality"=>"something", "dob"=>"1986-02-02", "period"=>"", "image"=>""}, "commit"=>"Update Artist", "id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "artists" SET "name" = ?, "updated_at" = ? WHERE "artists"."id" = ?[0m  [["name", "Some "], ["updated_at", "2017-08-23 06:12:10.107439"], ["id", 2]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/artists/2
+[INFO ] Completed [32m302 Found[0m in 13ms [30m(ActiveRecord: 6.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:10 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering artists/show.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = ?[0m  [["artist_id", 2]]
+[INFO ] [30m  Rendered [1martists/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 45ms [30m(Views: 40.8ms | ActiveRecord: 0.4ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/artists/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"vt8pNmpWPfzJRb1SZr7OuUlSJOX02ITL++kteux+gez4pkL921MZ7DjuTY7hhQBdh1w5ZR42Hf+Z/BUG+lozAg==", "id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 2]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/artists
+[INFO ] Completed [32m302 Found[0m in 10ms [30m(ActiveRecord: 4.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/artists" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mArtistsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering artists/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[INFO ] [30m  Rendered [1martists/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 53ms [30m(Views: 48.9ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:23 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#index[0m as [33mHTML[0m
+[INFO ]   Rendering works/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+[INFO ] [30m  Rendered [1mworks/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 35ms [30m(Views: 29.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:12:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering works/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mworks/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 27.0ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/works/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 16:17:07 +1000[0m
+[INFO ] [35m===[0m Processing by [35mWorksController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering works/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mworks/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m11.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 66ms [30m(Views: 51.1ms | ActiveRecord: 0.8ms)[0m

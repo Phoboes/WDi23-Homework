@@ -1,0 +1,8 @@
+<h1>A portal for artists</h1>
+<div class="artworksalign">
+  <% @artworks.each do |artwork| %>
+    <% unless artwork.image.nil?%>
+<img src="<%=artwork.image%>" alt="<%=artwork.title%>">
+  <% end %>
+  <%end %>
+</div>

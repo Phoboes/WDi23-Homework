@@ -1,0 +1,21 @@
+<h1>Magic Eight Ball</h1>
+
+<p>As the magic eight ball settles your answer slowly reveals itself.</p>
+
+<p><%= @question %></p>
+
+<div class="eigthBall">
+  <div class="circle">
+    <div class="outerRing">
+      <div class="displayFace">
+        <div class="triangle">
+          <div class="textDisplay">
+            <p><%= @answer %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="/magic_eight">Ask another question.</a>

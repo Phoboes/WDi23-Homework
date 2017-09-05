@@ -1,0 +1,12 @@
+<h2>Edit Artist</h2>
+
+<form action="/artists/<%= @artist.id%>" method="post">
+  <input type="text" name="name" value="<%= @artist.name%>" placeholder="Artist name">
+  <input type="text" name="medium" value="<%= @artist.medium%>" placeholder="Artist medium">
+  <input type="text" name="style" value="<%= @artist.style%>" placeholder="Artist style">
+  <input type="text" name="country" value="<%= @artist.country%>" placeholder="Artist country of origin">
+  <input type="text" name="years" value="<%= @artist.years%>" placeholder="Artist active years">
+  <input type="url" name="image" value="<%= @artist.image%>" placeholder="http://...">
+
+<button>Update Artist!</button>
+</form>

@@ -1,0 +1,22 @@
+<h1><%= @director.name %></h1>
+
+<%= image_tag @director.image, :class => 'feature' %>
+
+<ul>
+  <li>Nationality: <%= @director.nationality %></li>
+  <li>Date of birth: <%= @director.dob.strftime "%A %e %B, %Y" unless @director.dob.nil? %></li>
+  <li>Award: <%= @director.award %></li>
+</ul>
+
+<% @director.movies.each do |movie| %>
+  <%= link_to image_tag(movie.image, :class => 'thumb'), movie %>
+<% end %>
+
+<!-- Edit and Delete options -->
+<div class="controls">
+  <%= link_to "Edit director", edit_director_path(@director) %>
+  <%= link_to "Delete director", @director, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+</div>
+
+
+<!-- @director link with the directors_controller.rb - def show-->

@@ -1,0 +1,13 @@
+<h2><%= @doggos['breed']%></h2>
+<h3>Size: <em><%= @doggos['size']%></em></h3>
+<h3>Nickname: <em><%= @doggos['nickname']%></em></h3>
+<h3>Fur Colour: <em><%= @doggos['furcolour']%></em></h3>
+
+<% unless @doggos['image'].nil?%>
+<img class="feature" src="<%= @doggos['image']%>" alt="<%=@doggos['breed']%>"/>
+<% end %>
+
+<div class="controls">
+  <a href="/doggos/<%=@doggos['id']%>/delete">Delete</a>
+  <a href="/doggos/<%=@doggos['id']%>/edit">Edit</a>
+</div>
