@@ -1,0 +1,30 @@
+<%= form_for @car do |f| %>
+  <fieldset>
+    <%= f.label :make %>
+    <%= f.text_field :model %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :hp %>
+    <%= f.text_field :hp %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :Tq %>
+    <%= f.text_field :tq %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :manufacturer_id %>
+    <%= f.select :manufacturer_id, Manufacturer.pluck(:name, :id) %>
+  </fieldset>
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>

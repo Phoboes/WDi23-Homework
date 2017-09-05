@@ -1,0 +1,13 @@
+<h1><%= @manufacturer.name %></h1>
+<div class="textImg">
+  <%= image_tag @manufacturer.image %>
+  <p class="withIndent"><%= @manufacturer.description %></p>
+</div>
+
+
+<h3>Cars</h3>
+
+<% @manufacturer.cars.each do |c| %>
+  <%= link_to(image_tag(c.image, class: 'thumb'), c) if c.image %>
+
+<% end %>
