@@ -1,0 +1,36 @@
+<!-- UNDER /views/directors -->
+
+<%= form_for @director do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :dob, "Date of birth" %>
+    <%= f.text_field :dob %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :award %>
+    <%= f.text_field :award, :placeholder => 'Award' %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>
+
+
+<!-- need new.html.erb and edit.html.erb - link with edit.html.erb-->

@@ -1,0 +1,21 @@
+
+<h1><%= @ocean.name %></h1>
+
+<% unless @ocean.image.nil? %>
+  <%= image_tag @ocean.image, :class => 'feature' %>
+  <!-- link with css -->
+<% end %>
+
+<p>Area: <%= @ocean.area %></p>
+<p>Volume: <%= @ocean.volume %></p>
+<p>Depth: <%= @ocean.depth %></p>
+
+
+<div class="controls">
+  <!-- create a button in rails -->
+  <%= button_to "Delete ocean", ocean_delete_path(@ocean.id) %>
+  <%= link_to "Edit ocean", ocean_edit_path(@ocean.id) %>
+</div>
+
+
+<p>This is show.html.erb in /views/oceans</p>

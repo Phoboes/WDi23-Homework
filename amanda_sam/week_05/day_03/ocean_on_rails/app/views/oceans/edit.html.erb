@@ -1,0 +1,20 @@
+<h1>Edit Ocean</h1>
+
+<form action="<%= ocean_path(@ocean.id) %>" method="post">
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value="<%= @ocean.name %>" placeholder="Name" required autofocus>
+
+  <label for="image">Image:</label>
+  <input type="url" id="image" name="image" value="<%= @ocean.image %>" placeholder="http://...">
+
+  <label for="area">Area:</label>
+  <input type="text" id="area" name="area" value="<%= @ocean.area %>" placeholder="1.3">
+
+  <label for="depth">Depth:</label>
+  <input type="number" id="depth" name="depth" value="<%= @ocean.depth %>" placeholder="123224">
+
+
+  <button>Update Ocean</button>
+
+</form>
