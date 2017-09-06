@@ -1,0 +1,22 @@
+<h1>EDIT MOUNTAIN</h1>
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" value="<%= @mountain.name %>" placeholder="Mount Kilamanjaro" required autofocus>
+
+<label for="image">Image:</label>
+<input type="url" name="image" id="image" value="<%= @mountain.image %>" placeholder="http://...">
+
+<label for="location">Location:</label>
+<input type="text" id="location" name="location" value="<%= @mountain.location %>"  placeholder="Australia">
+
+<label for="elevation">Elevation:</label>
+<input type="number" id="elevation" name="elevation" value="<%= @mountain.elevation %>"  placeholder="12323123">
+
+<label for="prominence">Prominence:</label>
+<input type="number" id="prominence" name="prominence" value="<%= @mountain.prominence %>" placeholder="123123123">
+
+<label for="isolation">Isolation:</label>
+<input type="number" id="isolation" name="isolation" value="<%= @mountain.isolation %>" placeholder="223">
+
+<button>Update Mountain!</button>
+</form>

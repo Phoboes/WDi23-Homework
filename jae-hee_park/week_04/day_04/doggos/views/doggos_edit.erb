@@ -1,0 +1,12 @@
+<h2>Edit Doggo Info</h2>
+
+<form action="/doggos/<%= @doggos['id']%>" method="post">
+
+  <input type="text" name="breed" value="<%= @doggos['breed']%>" placeholder="Doggo's Breed">
+  <input type="text" name="size" value="<%= @doggos['size']%>" placeholder="Doggo's size">
+  <input type="text" name="nickname" value="<%= @doggos['nickname']%>" placeholder="Doggo's nickname">
+  <input type="text" name="furcolour" value="<%= @doggos['furcolour']%>" placeholder="Doggo's fur colour">
+  <input type="url" name="image" value="<%= @doggos['image']%>" placeholder="http://...">
+
+<button>Update Doggo!</button>
+</form>

@@ -1,0 +1,11 @@
+<h2>Edit Artwork</h2>
+
+<form action="/artworks/<%= @artwork.id%>" method="post">
+  <input type="text" name="title" value="<%= @artwork.title%>" placeholder="Title of Artwork">
+  <input type="text" name="artist" value="<%= @artwork.artist%>" placeholder="Artist">
+  <input type="text" name="genre" value="<%= @artwork.genre%>" placeholder="Genre">
+  <input type="text" name="year" value="<%= @artwork.year%>" placeholder="Artwork Year">
+  <input type="url" name="image" value="<%= @artist.image%>" placeholder="http://...">
+
+<button>Update Artwork!</button>
+</form>

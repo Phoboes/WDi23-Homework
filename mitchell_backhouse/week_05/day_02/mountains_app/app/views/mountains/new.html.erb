@@ -1,0 +1,10 @@
+<h1>New Mountain</h1>
+
+<%= form_for @mountain do |f| %>
+  <%= label_tag :name %> <%= f.text_field :name %><br />
+  <%= label_tag :image %> <%= f.text_field :image %><br />
+  <%= label_tag :location %> <%= f.text_field :location %><br />
+  <%= label_tag :elevation %> <%= f.text_field :elevation %><br />
+  <%= label_tag :description %> <%= f.text_area :description %><br />
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,25 @@
+body {
+  font-family: 'Concert One', cursive;
+  color: white;
+  background: url(titlescreen_background.jpg) no-repeat left center;
+}
+
+.input-container {
+  /*background-color: black;*/
+  display: inline-block;
+  background-image: url(form_text_backgound.jpg) no-repeat left top;
+  height: 30px;
+  width: 180px;
+
+}
+
+.input-container input {
+
+  height: 30px;
+  width: 180px;
+  padding:0 10px;
+  line-height: 30px;
+  border:none;
+
+  /*background:transparent;*/
+}
