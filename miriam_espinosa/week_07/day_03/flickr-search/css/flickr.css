@@ -1,10 +1,50 @@
 body {
   color: white;
-  background-color: green;
+  background-color: white;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/90/f0/3a/90f03a520cfea8dfcf69780279c2f1e7.jpg");
 }
 
+img {
+  padding: 19px;
+}
+
+h1 {
+  padding: 18px;
+}
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+  width: 80%;
+}
+
+.form-control {
+  width: 23%;
+  border-radius: 5px;
+  border: 2px solid rgba(0,0,0,.15);
+  margin: 25px auto;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 9px 27px;
+}
+
+.btn.btn-normal {
+  border: 1px solid #5a7eff;
+  background-color: #5a7eff;
+  margin: 25px auto;
+
+}
+
+.btn-block{
+  white-space: normal;
+  width: 22%;
+}
+
+.panel-default .panel-heading {
+  color: #fff;
+  background-color: rgb(20, 104, 236);
+  font-size: 18px;
+  font-weight: 400;
 }
