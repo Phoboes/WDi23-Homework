@@ -26,24 +26,22 @@ const createBoard = function(size) {
       console.log('j:', j);
       $('.board').append($(`<div class="square" id=${[i][j]}>`));
     }
-    //$('.board').append($('<div class="square">'));
   }
 }
 
-const movementController = function(key) {
-  
-}
-
+// create robot
 const initRobot = function() {
     $('.square').first().append($("<div class='robot'>"));
     console.log("Robot Created");
 };
 
+// init
 $(document).ready( function() {
   createBoard();
   initRobot();
 });
 
+// movement controller
 $(document).keydown(function(e) {
     const robot = $('.robot');
 
@@ -53,6 +51,7 @@ $(document).keydown(function(e) {
         if (robot.position().left !== 10) {
           console.log($('.robot').attr('left'));
           $('.robot').animate({left: "-=42"}, 0);
+          $('.robot').addClass('left').removeClass('up down right');
         }
         break;
 
@@ -60,6 +59,7 @@ $(document).keydown(function(e) {
         if (robot.position().top !== 10) {
           $('.robot').animate({top:"-=46"},0);
           console.log('move up');
+          $('.robot').addClass('up').removeClass('left down right');
         }
         break;
 
@@ -67,6 +67,7 @@ $(document).keydown(function(e) {
         if (robot.position().left !== 304) {
           $('.robot').animate({left:"+=42"},0);
           console.log('move right');
+          $('.robot').addClass('right').removeClass('up down left');
         }
         break;
 
@@ -74,6 +75,7 @@ $(document).keydown(function(e) {
         if (robot.position().top !== 332) {
           $('.robot').animate({top:"+=46"},0);
           console.log('move down');
+          $('.robot').addClass('down').removeClass('up left right');
         }
         break;
 
