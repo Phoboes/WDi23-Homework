@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  body {
+    background-color: lightpink;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .searchResult {
+    width: 20%;
+    min-width: 200px;
+    text-align: center;
+    border: 1px solid green;
+    border-radius: 12px;
+    background-color: rgba(255,255,255, 0.2);
+    margin: 20px;
+    padding: 50px;
+    min-height: 500px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  input, button {
+    height: 50px;
+    width: 20%;
+    text-align: center;
+
+
+  }
+
+  input {
+    /*margin-top: 40px;*/
+  }
+
+  button {
+    /*margin-top: 100px;*/
+  }
+
+  </style>
+
+  <title>Books with AJAX</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <input type="text" name="search" id="search" placeholder="Search books oon google books..." autofocus></input>
+    <button type="button" name="search">Search</button>
+    <div class="results"></div>
+  </div>
+
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

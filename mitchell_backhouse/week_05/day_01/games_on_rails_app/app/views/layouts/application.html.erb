@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesOnRailsApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  </head>
+
+  <body>
+    <nav>
+      <a href="/" class=<%= params[:action].include?('index') ? "nav1-selected" : "nav1" %>><p class="vertical-text">Home</p></a>
+      <a href="/eightball" class=<%= params[:action].include?("eight") ? "nav2-selected" : "nav2" %> ><p class="vertical-text">Magic&nbsp;8&nbsp;Ball</p></a>
+      <a href="/secretnumber" class=<%= params[:action].include?("secret") ? "nav3-selected" : "nav3" %>><p class="vertical-text">Mystery&nbsp;Number</p></a>
+      <a href="/rockpaperscissor" class=<%= params[:action].include?("rock") ? "nav4-selected" : "nav4" %>><p class="vertical-text">Rock&nbsp;Paper&nbsp;Scissors&nbsp;Lizzard&nbsp;Spock</p></a>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

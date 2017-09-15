@@ -1,0 +1,23 @@
+<h1>Edit Mountain</h1>
+
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value="<%= @mountain.name %>" placeholder="Mount Everest" required autofocus>
+
+  <label for="image">Image:</label>
+  <input type="url" id="image" name="image" value="<%= @mountain.image %>" placeholder="Image URL.">
+
+  <label for="first_climber">First Climber:</label>
+  <input type="text" id="first_climber" value="<%= @mountain.first_climber %>" name="first_climber" placeholder="Climbers Name">
+
+  <label for="year_climbed">Year Climbed:</label>
+  <input type="number" id="year_climbed" value="<%= @mountain.year_climbed %>" name="year_climbed" placeholder="1890">
+
+  <label for="height">Height:</label>
+  <input type="number" id="height" value="<%= @mountain.height %>" name="height" placeholder="6000">
+
+  <label for="deaths">Deaths:</label>
+  <input type="number" id="deaths" value="<%= @mountain.deaths %>" name="deaths" placeholder="80">
+
+  <button>Update Mountain</button>
+</form>

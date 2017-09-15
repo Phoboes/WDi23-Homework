@@ -1,0 +1,6 @@
+<h1>A whole bunch of mountains</h1>
+<ul>
+  <% @mountains.each do |mountain| %>
+  <div><%= link_to(mountain.name, mountain_path(mountain.id)) %></div>
+  <% end %>
+</ul>

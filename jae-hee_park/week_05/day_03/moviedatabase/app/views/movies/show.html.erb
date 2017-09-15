@@ -1,0 +1,11 @@
+<h1><%= @movie.name %></h1>
+  <%= image_tag @movie.image, :class =>'feature' %>
+    <p>Date of Release:<%= @movie.release.strftime " %A %e %B, %Y" unless @movie.release.nil? %></p>
+      <p>Genre: <%= @movie.genre %></p>
+
+      <p>Director: <%= link_to @movie.director.name, @movie.director unless @movie.director.nil? %></p>
+
+<div class="controls">
+  <%= link_to "Edit Movie", edit_movie_path(@movie)%>
+  <%= link_to "Delete Movie", @movie, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+</div>

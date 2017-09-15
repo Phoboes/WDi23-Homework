@@ -1,0 +1,13 @@
+<h2><%= @artist.name%></h2>
+<h3>Medium: <%= @artist.medium%></h3>
+<h3>Style: <%= @artist.style%></h3>
+<h3>Country: <%= @artist.country%></h3>
+<h3>Years: <%= @artist.years%></h3>
+<% unless @artist.image.nil?%>
+<img class="feature" src="<%= @artist.image%>" alt="<%=@artist.name%>"/>
+<% end %>
+
+<div class="controls">
+  <a href="/artists/<%=@artist.id%>/delete">Delete</a>
+  <a href="/artists/<%=@artist.id%>/edit">Edit</a>
+</div>

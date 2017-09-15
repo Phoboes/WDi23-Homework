@@ -1,0 +1,16 @@
+<h1>Show Movie Details</h1>
+<ul>
+  <li>
+    <p>Title: <%= @movie.title %></p>
+    <%= @movie.image %>
+    <p>Released on: <%= @movie.released_date %></p>
+    <p>Ratings: <%= @movie.ratings %></p>
+    <p>Synopsis: <%= @movie.synopsis %></p>
+  </li>
+</ul>
+
+<div class="controls">
+  <%= button_to 'Delete Movie', movie_delete_path(@movie.id) %>
+<%= link_to 'Edit Movie', movies_edit_path(@movie.id) %>
+
+</div>

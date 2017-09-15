@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MountainsApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%#<div class="stars"></div>%>
+    <%#<div class="twinkling"></div>%>
+    <div class="rotateBg"></div>
+    <div class="rotateBgRev"></div>
+    <nav class="topMenu">
+      <%= link_to 'Home', home_path, class: 'menu1' %>
+      <%= link_to 'Mountains', mountains_path, class: 'menu2' %>
+      <%= link_to 'New Mountain', new_mountains_path, class: 'menu3' %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= image_tag 'night_background.png', class: 'footer' %>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<h1><%= @orchid['name'] %></h1>
+<h2><%= @orchid['genus'] %></h2>
+
+<% unless @orchid['image'].nil? %>
+  <img src="<%= @orchid['image'] %>" alt="<%= @orchid['name'] %>">
+<% end %>
+
+<% unless @orchid['description'].nil? %>
+  <p><%= @orchid['description'] %></p>
+<% end %>
+
+<div class="controls">
+  <a href="/orchids/<%= @orchid['id'] %>/delete">Delete</a>
+  <a href="/orchids/<%= @orchid['id'] %>/edit">Edit</a>
+</div>

@@ -1,0 +1,15 @@
+<%= image_tag 'rpsls.jpg', class: 'rps' %>
+<br />
+<form action="/rockpaperscissor", class='rps'>
+  <button name="guess" value="rock">Rock</button>
+  <button name="guess" value="paper">Paper</button>
+  <button name="guess" value="scissors">Scissors</button>
+  <button name="guess" value="lizzard">Lizzard</button>
+  <button name="guess" value="spock">Spock</button>
+</form>
+
+<% if params.include? "guess" %>
+  <br />
+  <p class="resultText">The computer chose <%= @gameVal %></p>
+  <h2 class="resultText"><%= @response %></h2>
+<% end %>

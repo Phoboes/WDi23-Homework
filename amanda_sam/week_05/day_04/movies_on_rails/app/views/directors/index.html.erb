@@ -1,0 +1,16 @@
+<h1>All Directors</h1>
+
+<% @directors.each do |director| %>
+<%= image_tag director.image, :class => 'thumb' %>
+<!-- link with CSS -->
+
+<ul>
+  <!-- <li>Name: <%= link_to director.name, director_path(director.id) %></li> SAME AS BELOW-->
+  <li>Name: <%= link_to director.name, director %></li>
+  <li>Nationality: <%= director.nationality %></li>
+  <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" unless director.dob.nil? %></li>
+  <!-- check out the strftime webpage for more info -->
+  <li>Award: <%= director.award %></li>
+</ul>
+
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Mountains</h1>
+
+<div class="imageContainer">
+  <% @mountains.each do |m| %>
+    <a href="<%= mountain_url(m) %>">
+      <div class="indexImage" style="background: url(<%= m.image %>); background-size: cover; background-position: center;">
+        <div class="indexOverlay">
+          <div class="indexName"></div>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>
