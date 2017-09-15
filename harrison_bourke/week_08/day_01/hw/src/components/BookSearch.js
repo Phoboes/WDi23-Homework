@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
+import BookSearchForm from './BookSearchForm'
+import jsonp from 'jsonp-es6';
+
 
 class BookSearch extends Component {
   constructor(props) {
     super(props);
-    this.state = {query: ''};
-    this._handleChange = this._handleChange.bind(this);
-
+    this.state = { links: [] };
+    this.fetchLinks = this.fetchLinks.bind(this);
   }
 
-  _handleChange(e) {
+  fetchLinks(q) {
+    console.log("Searching for books with the query", q);
 
-    this.setState({query: e.target.value});
-    console.log(this.state);
+    if (!q) { return; }
+
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${q}`
+
+    jsonp(url, {callback: 'jsoncallback'}).then(function(results) {
+      let images = [];
+      let length = results.items.length  < 100 ? results.items.length : 100;
+      console.log(length);
+      for (let i = 0; i < length; i++) {
+        images.push(results.items[i].volumeInfo.imageLinks.thumbnail);
+      }
+      console.log(images);
+    })
 
   }
-
 
   render() {
     return (
-      <form>
-        <input type="search" placeholder="The Illiad" onInput={this._handleChange} value={this.state.query}/>
-        <input type="submit" value="Search"/>
-      </form>
+      <BookSearchForm onSubmit={this.fetchLinks}/>
     );
   }
 }
