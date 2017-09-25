@@ -1,0 +1,23 @@
+<%= form_for @movie do |f| %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true%>
+</fieldset>
+<fieldset>
+  <%= f.label :release, "Date of Release" %>
+  <%= f.text_field :release, :placeholder => "year/month/day" %>
+</fieldset>
+<fieldset>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+</fieldset>
+<fieldset>
+  <%= f.label :image %>
+  <%= f.url_field :image, :placeholder => "http..."%>
+</fieldset>
+<fieldset>
+  <%= f.label :director_id %>
+  <%= f.select :director_id, Director.pluck(:name, :id), :include_blank => true %>
+</fieldset>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,20 @@
+<div class="rockpaperscissors">
+  <h1>Your throw is</h1>
+    <h1 class=choice><%=@throw.upcase %></h1>
+
+  <h1>Computer throw is <h1>
+      <h1 class=choice><%= @compthrow.upcase%>
+    </h1>
+  <h1>Result is...</h1>
+    <h1 class=choice>  <%= @winner.upcase %></h1>
+</div>
+
+
+<!-- <form action="/rock_paper_scissors/lookup">
+ <select name="throw">
+   <option value="rock">Rock</option>
+   <option value="Paper">Paper</option>
+   <option value="Scissors">Scissors</option>
+ </select>
+ <button>Go</button>
+</form> -->

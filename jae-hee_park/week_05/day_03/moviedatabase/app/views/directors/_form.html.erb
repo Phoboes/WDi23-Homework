@@ -1,0 +1,19 @@
+<%= form_for @director do |f| %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true%>
+</fieldset>
+<fieldset>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality %>
+</fieldset>
+<fieldset>
+  <%= f.label :dob, "Date of birth" %>
+  <%= f.text_field :dob, :placeholder => "year/month/day" %>
+</fieldset>
+<fieldset>
+  <%= f.label :image %>
+  <%= f.url_field :image, :placeholder => "http..."%>
+</fieldset>
+<%= f.submit %>
+<% end %>

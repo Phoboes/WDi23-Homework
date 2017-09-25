@@ -1,0 +1,15 @@
+<h2>Seeds List</h2>
+<div class="container">
+  <div id="wrapper">
+
+    <ul>
+      <% @seeds.each do |seed| %>
+      <li>
+        <a class="seed-name" href="/seeds/<%= seed['id'] %>"><%= seed['name']%>
+          <a href="/seeds/<%= seed['id'] %>"><img src="<%= seed['image']%>" alt="<%= seed['name']%>"/>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
