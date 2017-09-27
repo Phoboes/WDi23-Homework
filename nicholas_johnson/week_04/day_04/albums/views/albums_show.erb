@@ -1,0 +1,17 @@
+<div class="show-container">
+	<% unless @albums['image'].nil?%>
+	<img class="feature" src="<%=@albums['image']%>" alt="">
+	<%end%>
+	<div class="info-container">
+		<h2><%= @albums['title']%></h2>
+		<h3>by <%=@albums['artist']%></h3>
+		<h3>Year of release: <%=@albums['year']%></h3>
+		<h3>Label: <%=@albums['label']%></h3>
+	</div>
+</div>
+
+
+<div class="controls">
+	<a href="/albums/<%=@albums['id']%>/delete">Delete</a>
+	<a href="/albums/<%=@albums['id']%>/edit">Edit</a>
+</div>

@@ -55,8 +55,6 @@ p {
   background-color: #0f0;
   vertical-align: middle;
   margin-right: 10px;
-  color: #0b0;
-  line-height: 0px;
 }
 
 .command-line {
@@ -137,7 +135,6 @@ a:visited {
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #0b0; }
