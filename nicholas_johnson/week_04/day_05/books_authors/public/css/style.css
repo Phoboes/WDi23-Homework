@@ -1,0 +1,18 @@
+body {
+	background-color: #bbf;
+	margin: 0;
+	color: #66f;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #bfb;
+	padding: 20px;
+}
+
+.feature {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}

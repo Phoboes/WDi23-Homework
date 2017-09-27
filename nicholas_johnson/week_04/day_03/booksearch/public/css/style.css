@@ -1,0 +1,39 @@
+body {
+	background-color: #0088ff;
+	color: #55ff99
+	margin: 0 auto;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	color: #55ff99
+}
+
+h1 {
+	font-family: Arial, sans-serif;
+	color: #55ff99
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+form {
+	font-family: Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #55ff99
+	font-family: Arial, sans-serif;
+}
+
+a:visited {
+	color: #55ff99
+}
+
+img {
+	margin: 0 auto;
+	align-content: center;
+}
