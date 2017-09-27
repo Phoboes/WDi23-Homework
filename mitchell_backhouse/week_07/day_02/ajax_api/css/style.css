@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+#question {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(166, 166, 166, 1);
+  border-radius: 5px;
+  font-size: 26px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.output {
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.output > p {
+  text-align: center;
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+}
+
+.stringReturn {
+  font-size: 20px;
+}
+
+.stringReturn > p {
+  margin-bottom: 10px;
+}
+
+.confidence {
+  text-align: left;
+  display: inline-block;
+  font-size: 20px;
+  width: 49%;
+}
+
+.evalue {
+  text-align: right;
+  display: inline-block;
+  font-size: 20px;
+  width: 50%;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.stringSearched > p {
+  font-size: 20px;
+  margin: 0;
+  border: 1px solid black;
+  padding: 5px;
+  display: inline-block;
+  color: white;
+  background-color: black;
+}
+
+span {
+  font-weight: 800;
+}
