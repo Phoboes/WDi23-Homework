@@ -1,0 +1,9 @@
+<h1>Edit the Orchid details</h1>
+
+<form action="/orchids/<%= @orchid['id'] %>" method="post">
+  <input type="text" name="name" value="<%= @orchid['name'] %>" placeholder="Name" autofocus required>
+  <input type="text" name="genus" value="<%= @orchid['genus'] %>" placeholder="Genus" required>
+  <input type="url" name="image" value="<%= @orchid['image'] %>" placeholder="http://...">
+  <input type="text" name="description" value="<%= @orchid['description'] %>" placeholder="Description">
+  <button>Edit Orchid</button>
+</form>

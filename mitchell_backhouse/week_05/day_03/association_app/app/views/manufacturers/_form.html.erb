@@ -1,0 +1,22 @@
+<%= form_for @manufacturer do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :founded %>
+    <%= f.text_field :founded %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </fieldset>
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>

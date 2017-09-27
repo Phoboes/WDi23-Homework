@@ -1,0 +1,15 @@
+<h1>Magic 8 Ball</h1>
+
+<form action="/eightball">
+  <input type="question" name="question" placeholder="Enter a question">
+  <br />
+  <br />
+  <button>Submit</button>
+</form>
+
+<% if !params[:question].blank? %>
+  <br />
+  <p>The almighty 8 ball reads your fate and says...</p>
+  <h2><%= @response %></h2>
+<% end %>
+

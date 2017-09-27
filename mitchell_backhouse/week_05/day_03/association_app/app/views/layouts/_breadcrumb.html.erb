@@ -1,0 +1,27 @@
+<% if params[:controller] == "manufacturers" %>
+  <div class="breadcrumb">
+    <div class="container">
+      <%= link_to 'New Manufacturer', new_manufacturer_path, class: 'manBread' %>
+    </div>
+  </div>
+  <% if params[:controller] == "manufacturers" && params[:action] == "show" %>
+    <div class="container">
+      <div class="manEdit">
+        <%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %>
+      </div>
+    </div>
+  <% end %>
+<% elsif params[:controller] == "cars" %>
+  <div class="breadcrumb">
+    <div class="container">
+      <%= link_to 'New Car', new_car_path, class: 'carBread' %>
+    </div>
+  </div>
+  <% if params[:controller] == "cars" && params[:action] == "show" %>
+    <div class="container">
+      <div class="carEdit">
+        <%= link_to 'Edit', edit_car_path(@car) %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

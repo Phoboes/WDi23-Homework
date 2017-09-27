@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wonderful Word of Butterflies</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/butterflies">All Butterflies</a>
+        <a href="/butterflies/new">New Butterflies</a>
+        |
+        <a href="/plants">All Plants</a>
+        <a href="/plants/new">NewPlants</a>
+        |
+        <% @families.each do |f|%>
+          <a href="/butterflies/families/<%= f %>"><%= f %></a>
+        <% end %>
+      </nav>
+      <%= yield %>
+    </div>
+  </body>
+</html>

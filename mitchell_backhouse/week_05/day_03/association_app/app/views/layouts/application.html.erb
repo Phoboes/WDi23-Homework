@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manufacturers and Cars</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <%= active_link_to 'Manufacturers', manufacturers_path, class_active: 'selected' %>
+          <%= active_link_to 'Cars', cars_path, class_active: 'selected' %>
+        </nav>
+      </div>
+    </header>
+    <%= render partial: 'layouts/breadcrumb' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

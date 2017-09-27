@@ -1,0 +1,32 @@
+<%= form_for @book do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title, :autofocus => true, :placeholder => 'The Alchemist' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :author %>
+    <%= f.text_field :author, :placeholder => 'Paulo Coelho' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher, :placeholder => 'HarperCollins Publishers' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :publication_date %>
+    <%= f.text_field :publication_date, :placeholder => 'yyyy-mm-dd' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image, :placeholder => 'https://...' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :author_id %>
+    <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>
+  </fieldset>
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+
+<% end %>

@@ -1,0 +1,11 @@
+<h1>List of Orchids</h1>
+
+<ul>
+  <% @orchids.each do |orchid| %>
+    <li>
+      <a href="/orchids/<%= orchid['id'] %>">
+        <%= orchid['name'] %>
+      </a>
+    </li>
+  <% end %>
+</ul>

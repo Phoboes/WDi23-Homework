@@ -1,0 +1,12 @@
+<h1><%= @mountain.name %></h1>
+
+<% unless @mountain.image.nil? %>
+  <%= image_tag @mountain.image, class: 'fixedSize' %>
+<% end %>
+
+<p><%= @mountain.location %></p>
+<p><%= @mountain.elevation %></p>
+<p><%= @mountain.description %></p>
+
+<%= link_to 'Edit Mountain', edit_mountain_path(@mountain) %>
+<%= button_to 'Delete Mountain', delete_mountain_path(@mountain) %>
