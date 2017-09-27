@@ -1,6 +1,6 @@
 const fetchBook = function () {
 
-  val = document.getElementById('search').value;
+  const val = document.getElementById('search').value;
   console.log(val);
 
   const xhr = new XMLHttpRequest();
@@ -22,10 +22,10 @@ const fetchBook = function () {
     //link to thumbnail image
     // info.items[0].volumeInfo.imageLinks.thumbnail
 
-    const img = document.getElementById('image');
-    img.setAttribute("id", "image");
+    // const img = document.getElementById('image');
+
     document.getElementById("image").src = image;
-    document.body.appendChild(img);
+    // document.body.appendChild(img);
 
 
 
