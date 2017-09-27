@@ -1,0 +1,28 @@
+<%= form_for @book do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title, :autofocus => true %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :author_id %>
+    <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>
+  </fieldset>
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+
+<% end %>

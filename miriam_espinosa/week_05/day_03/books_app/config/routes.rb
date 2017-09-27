@@ -20,7 +20,7 @@
 #
 
 Rails.application.routes.draw do
-  root :to => 'author#index'
+  root :to => 'authors#index'
   resources :books
   resources :authors
 end

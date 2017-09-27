@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+
+}
+.board {
+  width: 340px;
+  height: 380px;
+  border: 1px solid white;
+}
+
+.square {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.robot {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color:rgba(255, 0, 214, 1);
+  margin: 0 auto;
+}
+
+.up {
+  border-top: 4px solid rgba(0, 134, 255, 1);
+}
+
+.down {
+  border-bottom: 4px solid rgba(0, 134, 255, 1);
+}
+
+.left {
+  border-left: 4px solid rgba(0, 134, 255, 1);
+}
+
+.right {
+  border-right: 4px solid rgba(0, 134, 255, 1);
+}
