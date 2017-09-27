@@ -1,0 +1,34 @@
+<body onload="initialize()">
+  <div class="container">
+    <div id="earth_div">
+      <form action="/pages/globe" class="searchBar" >
+        <input type="text" name="address" placeholder="Search for a location" class="searchInput">
+        <button class="searchButton">Search</button>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="//www.webglearth.com/v2/api.js"></script>
+<script>
+
+  let earth;
+  function initialize() {
+    let options = {
+          sky: true,
+          dragging: true,
+          tilting: true,
+          zoom: 2
+        };
+    earth = new WE.map('earth_div', options);
+    WE.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          minZoom: 0,
+          maxZoom: 5,
+          attribution: '© OpenStreetMap'
+        }).addTo(earth);
+    earth.setView([-25.555616, 134.330870], 2);
+
+  }
+  const setView = function(zoom) {
+    earth.setView([-25.555616, 134.330870], zoom);
+  }
+</script>

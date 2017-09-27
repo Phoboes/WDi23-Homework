@@ -5,7 +5,17 @@ $(document).ready(function(){
     $swatch.appendTo('.palette');
   }); //onClick add-color
 
-  $('.swatch').on('click', function (){
-    console.log('you clicked a swatch');
-  }); //onClick swatch
+  $('.palette').on('click', '.swatch', function (){
+    $('.swatch.active').removeClass('active');
+    $(this).addClass('active');
+  }); //onClick .swatch delegated from .palette
+
+  $('.canvas').on('mouseover', '.pixel', function (e){
+    if (e.shiftKey){ return; }
+      var color = $('.swatch.active').css('background-color');
+      $(this).css('background-color', color);
+
+  });
+
+
 }); //document ready

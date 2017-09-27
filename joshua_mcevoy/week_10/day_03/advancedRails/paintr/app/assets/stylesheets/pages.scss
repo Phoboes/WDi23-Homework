@@ -12,6 +12,11 @@
   border-radius: 0.5em;
 }
 
+.swatch.active {
+  border: 4px solid lightblue;
+  box-shadow: 0 0 10px grey;
+}
+
 .pixel {
   float: left;
   width: 1em;

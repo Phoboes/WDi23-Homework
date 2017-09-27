@@ -174,3 +174,122 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 289ms (Views: 278.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:28:09 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (5.9ms)
+Completed 200 OK in 203ms (Views: 199.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:28:40 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (7.1ms)
+Completed 200 OK in 369ms (Views: 365.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:30:42 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (8.7ms)
+Completed 200 OK in 319ms (Views: 313.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:31:24 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (7.8ms)
+Completed 200 OK in 275ms (Views: 271.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:32:42 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (7.2ms)
+Completed 200 OK in 573ms (Views: 569.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:32:51 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (5.3ms)
+Completed 200 OK in 266ms (Views: 262.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:33:14 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (6.2ms)
+Completed 200 OK in 272ms (Views: 267.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:33:59 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (6.1ms)
+Completed 200 OK in 482ms (Views: 478.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:34:24 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (6.1ms)
+Completed 200 OK in 63ms (Views: 58.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:34:34 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (7.9ms)
+Completed 200 OK in 277ms (Views: 272.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:36:59 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (6.0ms)
+Completed 200 OK in 129ms (Views: 124.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:37:28 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (5.2ms)
+Completed 200 OK in 479ms (Views: 475.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:38:14 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (8.4ms)
+Completed 200 OK in 510ms (Views: 505.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:38:21 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (9.6ms)
+Completed 200 OK in 52ms (Views: 46.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:40:15 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (6.0ms)
+Completed 200 OK in 283ms (Views: 279.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:40:47 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (8.5ms)
+Completed 200 OK in 361ms (Views: 357.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 12:42:40 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.haml within layouts/application
+  Rendered pages/index.haml within layouts/application (12.4ms)
+Completed 200 OK in 441ms (Views: 436.1ms)
+
+

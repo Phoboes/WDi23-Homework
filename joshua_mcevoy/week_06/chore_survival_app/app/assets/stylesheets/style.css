@@ -1,0 +1,349 @@
+body {
+  font-family: 'Concert One', cursive;
+  color: white;
+  -webkit-text-stroke: .5px #B07C4F;
+  font-size: 20px;
+  background: url(titlescreen_background.jpg) no-repeat left center;
+}
+
+fieldset {
+  border: none;
+  margin: 0px;
+  padding: 0px 0px 0px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* START NAV BUTTONS*/
+
+.nav_bar {
+  margin-top: 9px;
+}
+
+.home_button {
+  display: inline-block;
+  background: url(home_button_normal.png) no-repeat left top;
+  height: 60px;
+  width: 60px;
+  margin-left: 42px;
+}
+.home_button:hover {
+  background: url(home_button_hover.png) no-repeat left top;
+}
+
+.signout_button {
+  display: inline-block;
+  background: url(signout_button_normal.png) no-repeat left top;
+  height: 60px;
+  width: 60px;
+}
+.signout_button:hover {
+  background: url(signout_button_hover.png) no-repeat left top;
+}
+
+.friends_button {
+  display: inline-block;
+  background: url(friends_button_normal.png) no-repeat left top;
+  height: 60px;
+  width: 60px;
+}
+.friends_button:hover {
+  background: url(friends_button_hover.png) no-repeat left top;
+}
+
+.chores_button {
+  display: inline-block;
+  background: url(chores_button_normal.png) no-repeat left top;
+  height: 60px;
+  width: 60px;
+}
+.chores_button:hover {
+  background: url(chores_button_hover.png) no-repeat left top;
+}
+
+
+.button {
+  background: url(button_log.png) no-repeat left top;
+  position: absolute;
+  text-align: center;
+  font-family: 'Concert One', cursive;
+  font-size: 30px;
+  color: white;
+  height: 60px;
+  width: 135px;
+  border: none;
+  cursor: pointer;
+}
+
+#sign_in {
+  bottom: 50px;
+  left: 178px;
+}
+#sign_out {
+  bottom: 50px;
+  left: 34px;
+}
+
+
+/* END NAV BUTTONS*/
+
+
+.chore_button > a {
+  color: white;
+}
+
+.chore_button > a:visited {
+  color: white;
+}
+
+.banner {
+  position: relative;
+  margin: 0 auto;
+  background: url(banner.png) no-repeat left top;
+  width: 600px;
+  height: 153px;
+  margin-bottom: -80px;
+  z-index: 1;
+}
+
+.banner > h1{
+  text-align: center;
+  -webkit-text-stroke: .2px #9E1E08;
+}
+
+.buffer {
+  position: relative;
+  padding: 10px;
+  top: 8px;
+  width: 281px;
+  height: 340px;
+  overflow: auto;
+}
+
+.buffer_background {
+  background: url(buffer_background.png) no-repeat left top;
+  position: relative;
+  left: 25px;
+  width: 305px;
+  height: 379px;
+}
+
+.center {
+  margin-top: 106px;
+  width: 283px;
+  text-align: center;
+}
+
+.group_name {
+  position: absolute;
+  top: -26px;
+  left: 52px;
+  color: white;
+  -webkit-text-stroke: .5px #B07C4F;
+  font-size: 29px;
+}
+
+#create_button {
+  position: absolute;
+  bottom: -23px;
+  left: 76px;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.group_box {
+  background: url(groups_button.png) no-repeat left top;
+  height: 50px;
+  width: 290px;
+  border-radius: 8px;
+  left: 5px;
+  position: absolute;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+fieldset > label {
+  font-size: 30px;
+  -webkit-text-stroke: .5px #B07C4F;
+}
+
+
+.chore_button {
+  display: block;
+  position: relative;
+  background: url(chore_button.png) no-repeat left top;
+  height: 89px;
+  width: 270px;
+}
+
+.chore_p_name {
+  font-size: 11px;
+  position: absolute;
+  top: 0px;
+  left: 85px;
+}
+
+.chore_p_description {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  position: absolute;
+  top: 26px;
+  left: 85px;
+}
+
+.chore_p_reward {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+.error {
+  color: #E50000;
+  margin-left: 17px;
+  max-width: 240px;
+}
+
+.error > li {
+  margin-left: -24px;
+}
+
+.fill {
+  height: 66px;
+  width: 369px;
+}
+
+.form {
+  /*width: 970px;*/
+  margin: 0 auto;
+}
+
+.formBackground {
+  background: url(formBackground.png) no-repeat left top;
+  position: relative;
+  margin: 0 auto;
+  height: 563px;
+  width: 372px;
+}
+
+.img_feature {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  border-radius: 8px;
+}
+
+.img_feature_background {
+  position: relative;
+  background: url(img_feature_background.png) no-repeat left top;
+  width: 300px;
+  height: 208px;
+  top: -18px;
+  left: -9px;
+}
+
+.img_thumb {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  border-radius: 5px;
+}
+
+.input-container {
+  /*background-color: black;*/
+  /*display: inline-block;*/
+  background: url(form_text_background.png) no-repeat left top;
+  height: 40px;
+  width: 240px;
+}
+
+.input-container input {
+  height: 40px;
+  width: 220px;
+  padding:0 10px;
+  line-height: 30px;
+  border:none;
+  background:transparent;
+}
+
+.submitButton {
+  position: absolute;
+  font-family: 'Concert One', cursive;
+  font-size: 30px;
+  color: white;
+  left: 53px;
+  bottom: 102px;
+  height: 80px;
+  width: 180px;
+  border: none;
+  cursor: pointer;
+  background: url(button.png) no-repeat top left;
+}
+
+#signUp_button {
+  bottom: 29px;
+  left: 56px;
+}
+
+#creat_button {
+  position: absolute;
+  top: 100px;
+  left: 70px;
+}
+
+.submitButtonChores {
+  position: absolute;
+  left: 81px;
+  bottom: -100px;
+  height: 80px;
+  width: 180px;
+  background: url(button.png) no-repeat top left;
+}
+
+.user_button {
+  position: relative;
+  background: url(user_button.png) no-repeat left top;
+  height: 62px;
+  width: 270px;
+}
+
+.user_button > p {
+  position: absolute;
+  font-size: 20px;
+  top: -8px;
+  left: 53px;
+  -webkit-text-stroke: .5px #B07C4F;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bannerHead {
+  width: 397px;
+  position: absolute;
+  font-size: 53px;
+  left: 101px;
+  line-height: 97px;
+  vertical-align: middle;
+  top: -35px;
+}
