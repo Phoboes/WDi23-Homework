@@ -1,0 +1,10 @@
+<h2>Edit the Meme!</h2>
+
+<form action="/memes/<%=@meme['id']%>" method="post">
+  <input type="text" name="description" value="<%=@meme['description']%>" placeholder="Description for Meme">
+  <input type="number" name="rating" value="<%=@meme['rating']%>" placeholder="Rating /10">
+  <input type="radio" name="dank" value="true">Is Dank
+  <input type="radio" name="dank" value="false">Isn't Dank
+  <input type="url" name="image" value="<%= @meme['image'] %>" placeholder="http://">
+  <button>Update Meme</button>
+</form>

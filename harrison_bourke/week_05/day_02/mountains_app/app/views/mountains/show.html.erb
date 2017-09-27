@@ -1,0 +1,12 @@
+<h1><%= @mountain.name %></h1>
+
+<% unless @mountain.image.nil? %>
+  <%= image_tag @mountain.image, :class => 'feature' %>
+<% end %>
+
+<p><%= @mountain.name %> is located in <%= @mountain.country %>, and stands at <%= @mountain.elevation %> meters high.</p>
+
+<div class="controls">
+  <%= button_to "Delete Mountain", mountain_delete_path(@mountain.id) %>
+  <%= link_to "Edit Mountain", mountain_edit_path(@mountain.id) %>
+</div>

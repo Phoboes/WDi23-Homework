@@ -1,0 +1,19 @@
+body {
+  color: white;
+  background-color: #FAE3E3;
+  margin: 0;
+}
+
+.container {
+  background-color: #F7D4BC;
+  margin: 0 auto;
+  max-width: 960px;
+  min-height: 960px;
+  padding: 1em;
+  border-radius: 3%;
+  box-shadow: 0 0 10px black;
+}
+
+a {
+  color: #C98BB9;
+}
