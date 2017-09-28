@@ -1,0 +1,82 @@
+* {
+  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #f3f8fc 0%, #efe6f9 100%);
+  height: 110vh;
+}
+
+p {
+  color: white;
+
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 10vh;
+  max-width: 300px;
+  padding: 60px;
+  background: linear-gradient(135deg, #2b323a 0%, #1d0c1f 100%);
+  min-height: 420px;
+  box-shadow: 16px 16px 32px rgba(30, 15, 33, 0.5);
+}
+
+.display {
+  margin: 0 auto;
+  width: 300px;
+  height: 260px;
+  background-color: black;
+}
+
+.inputSearchContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.textContainer {
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+#currentWeather {
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#input {
+  background-color: transparent;
+  border: 1px solid #4f4d53;
+  color: #b1afb8;
+  font-size: 18px;
+  line-height: 20px;
+  margin: -23px auto;
+  padding: 5px;
+  position: relative;
+}
+
+#locationName {
+  color: #b1afb8;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+#search {
+  background-color: white;
+  border: none;
+  height: 32px;
+  margin-top: -2px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+#tempText {
+  color: #b1afb8;
+  text-transform: uppercase;
+  font-size: 15px;
+}

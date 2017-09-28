@@ -1,0 +1,33 @@
+.container {
+  background-color: hotpink;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box {
+  /*display: flex;*/
+}
+
+.red {
+  background-color: red;
+  height: 300px;
+  width: 150px;
+}
+
+.blue {
+  background-color: blue;
+  height: 100px;
+  width: 250px;
+}
+
+.green {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+}
+
+#thisguy {
+  align-self: stretch;
+}
