@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  padding-top: 22px;
+}
+
+.container {
+  width: 60%;
+}
+
+.panel-default .panel-heading {
+  color: #fff;
+  background-color: #ec6606;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 7px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
