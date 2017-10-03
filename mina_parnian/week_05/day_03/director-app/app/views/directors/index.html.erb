@@ -1,0 +1,10 @@
+<h1>All Directors</h1>
+<% @directors.each do |director| %>
+<h1>Name: <%= link_to director.name, director %><h1>
+  <%= image_tag director.image, :class => "thumb" %>
+
+
+<% end %>
+
+
+<!-- director_path(director.id) or director_path(director) or director -->
