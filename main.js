@@ -196,16 +196,16 @@ window.onkeydown = function( e ){
   }
 
   var direction = app.snake.body.direction;
-  if( key === "w" || key === "arrowup" && direction !== "down" ){
+  if( ( key === "w" || key === "arrowup" ) && direction !== "down" ){
     app.snake.body.direction = "up";
     app.movement.allowDirectionChange = false;
-  } else if ( key === "d" || key === "arrowright"  && direction !== "left" ){
+  } else if ( ( key === "d" || key === "arrowright" ) && direction !== "left" ){
     app.snake.body.direction = "right";
     app.movement.allowDirectionChange = false;
-  } else if ( key === "s" || key === "arrowdown"  && direction !== "up" ){
+  } else if ( ( key === "s" || key === "arrowdown" ) && direction !== "up" ){
     app.snake.body.direction = "down";
     app.movement.allowDirectionChange = false;
-  } else if ( key === "a" || key === "arrowleft"  && direction !== "right" ){
+  } else if ( ( key === "a" || key === "arrowleft" ) && direction !== "right" ){
     app.snake.body.direction = "left";
     app.movement.allowDirectionChange = false;
   }
