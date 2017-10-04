@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue-multiselect@2.0.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.0.0/dist/vue-multiselect.min.css">
+  <title>Vue Intro</title>
+</head>
+<body>
+
+
+  <template>
+    <div>
+      <multiselect v-model="value" :options="options"></multiselect>
+    </div>
+  </template>
+
+  <div class="container">
+    <div>
+      <label for="startingLine">Starting Line</label>
+      <v-select id="startingLineSelector">
+        <option value="-">-</option>
+        <option value="N">Line N</option>
+        <option value="L">Line L</option>
+        <option value="6">Line 6</option>
+      </select>
+      <label for="startingStation">Starting Station</label>
+      <select id="nStartingStationSelector">
+        <option value="Times Square">Times Square</option>
+        <option value="34th">34th</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="8th">8th</option>
+      </select>
+
+      <select id="lStartingStationSelector">
+        <option value="8th">8th</option>
+        <option value="6th">6th</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </select>
+
+      <select id="6StartingStationSelector">
+        <option value="Grand Central">Grand Central</option>
+        <option value="33rd">33rd</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="Astor Place">Astor Place</option>
+      </select>
+
+  </div>
+
+  <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="js/intro.js" charset="utf-8"></script>
+</body>
+</html>
