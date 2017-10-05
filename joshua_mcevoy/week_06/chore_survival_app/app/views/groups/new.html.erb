@@ -1,0 +1,53 @@
+<div class="form">
+  <div class="banner"><h1 class="bannerHead">Create Group</h1></div>
+
+    <div class="formBackground">
+      <!-- this is a filled div to create extra space -->
+      <div class="fill"></div>
+      <div class="buffer_background">
+        <div class="buffer">
+          <!-- this will display errors if the form isn't filled out correctly -->
+          <% if flash[:error].present? %>
+            <p class="error">
+              <%= flash[:error] %>
+            </p>
+          <% end %>
+
+          <%= form_tag groups_new_path do %>
+            <!-- label for name -->
+            <fieldset>
+              <%= label_tag :name %>
+              <div class="input-container">
+                <%= text_field_tag :name, nil %>
+              </div>
+            </fieldset>
+            <!-- submit button -->
+
+              <%= submit_tag 'Create', :class=>'button', :id=>'creat_button'%>
+
+          <% end %>
+
+
+        </div>
+      </div>
+
+      <!-- navigation -->
+      <div class="nav_bar">
+        <%= link_to root_path do %>
+          <div class="home_button"></div>
+        <% end %>
+        <%= link_to login_path, :method => 'delete' do %>
+          <div class="signout_button"></div>
+        <% end %>
+        <%= link_to groups_path do %>
+          <div class="friends_button"></div>
+        <% end %>
+        <%= link_to chores_path do %>
+          <div class="chores_button"></div>
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>

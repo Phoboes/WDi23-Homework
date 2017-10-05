@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #545454;
+  font-size: 22px;
+}
+
+#difficulty {
+  margin-left: 18px;
+  margin-top: 19px;
+}
+
+#restartButton {
+  margin-top: 19px;
+  margin-left: 212px;
+}
+
+#scoreContainerPlayerOne {
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+#scoreContainerPlayerTwo {
+  margin-left: 26px;
+  cursor: pointer;
+}
+
+#squareOne {
+  position: absolute;
+  top: 11px;
+  left: 128px;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareTwo {
+  position: absolute;
+  top: 11px;
+  left: 228px;
+  border-left: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareThree {
+  position: absolute;
+  top: 11px;
+  left: 336px;
+  border-left: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareFour {
+  position: absolute;
+  top: 111px;
+  left: 128px;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareFive {
+  position: absolute;
+  top: 111px;
+  left: 228px;
+  border: solid 8px #5491BF;
+}
+
+#squareSix {
+  position: absolute;
+  top: 111px;
+  left: 336px;
+  border-top: solid 8px #5491BF;
+  border-left: solid 8px #5491BF;
+  border-bottom: solid 8px #5491BF;
+}
+
+#squareSeven {
+  position: absolute;
+  top: 219px;
+  left: 128px;;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+}
+
+#squareEight {
+  position: absolute;
+  top: 219px;
+  left: 228px;
+  border-left: solid 8px #5491BF;
+  border-top: solid 8px #5491BF;
+  border-right: solid 8px #5491BF;
+}
+
+#squareNine {
+  position: absolute;
+  top: 219px;
+  left: 336px;
+  border-left: solid 8px #5491BF;
+  border-top: solid 8px #5491BF;
+}
+
+.button {
+  background-color: #63ABE0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #545454;
+  border: none;
+  height: 34px;
+  min-width: 150px;
+  border-radius: 24px;
+  line-height: 33px;
+  cursor: pointer;
+
+}
+
+.buttonEasy {
+  background-color: #4CAF50;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #545454;
+  border: none;
+  height: 34px;
+  min-width: 150px;
+  border-radius: 24px;
+  line-height: 33px;
+  cursor: pointer;
+
+}
+
+.buttonHard {
+  background-color: #F44336;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #545454;
+  border: none;
+  height: 34px;
+  min-width: 150px;
+  border-radius: 24px;
+  line-height: 33px;
+  cursor: pointer;
+
+}
+
+.container {
+  width: 587px;
+  min-height: 458px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px 0px #7D7D7D;
+}
+
+.gameBoard {
+  min-width: 400px;
+  min-height: 337px;
+  background-color: #63ABE0;
+  position: relative;
+}
+
+.highlight {
+  border-bottom: solid 5px #63ABE0;
+}
+
+.score {
+  vertical-align: middle;
+  display: inline-block;
+  min-width: 170px;
+  min-height: 35px;
+  margin-top: -1px;
+  box-shadow: 0px 0px 3px #7D7D7D;
+  background-color: white;
+  text-align: center;
+}
+
+.scoreContainer {
+  min-width: 100%;
+  min-height: 72px;
+  background-color: #F5F5F5;
+  display: inline-block;
+}
+
+.scoreLabel {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+/*////////////////////////////////////////////*/
+/*start of line strike*/
+.strike {
+  height: 9px;
+  width: 300px;
+  position: absolute;
+  border-radius: 9px;
+  background-color: #545454;
+  -webkit-animation-name: strikeOut;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.strikeVert {
+  height: 300px;
+  width: 9px;
+  position: absolute;
+  border-radius: 9px;
+  background-color: #545454;
+  -webkit-animation-name: strikeOutVert;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.strikeDiag {
+  height: 9px;
+  width: 370px;
+  position: absolute;
+  border-radius: 9px;
+  background-color: #545454;
+  -webkit-animation-name: strikeOutDiag;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.strikeRowOne {
+  top: 59px;
+  left: 135px;
+}
+
+.strikeRowTwo {
+  top: 168px;
+  left: 135px;
+}
+
+.strikeRowThree {
+  top: 275px;
+    left: 135px;
+}
+
+.strikeColOne {
+  top: 18px;
+  left: 174px;
+}
+
+.strikeColTwo {
+  top: 22px;
+  left: 281px;
+}
+
+.strikeColThree {
+  top: 22px;
+  left: 389px;
+}
+
+.strikeDiagOne{
+  top: 38px;
+  left: 158px;
+  width: 370px;
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.strikeDiagTwo{
+  top: 299px;
+  left: 153px;
+  width: 370px
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+@-webkit-keyframes strikeOut {
+  0%{
+    width: 1px;
+  }
+  100%{
+    width: 300px;
+  }
+}
+
+@keyframes strikeOut {
+  0%{
+    width: 1px;
+  }
+  100%{
+    width: 300px;
+  }
+}
+
+@-webkit-keyframes strikeOutVert {
+  0%{
+    height: 1px;
+  }
+  100%{
+    height: 300px;
+  }
+}
+
+@keyframes strikeOutVert {
+  0%{
+    height: 1px;
+  }
+  100%{
+    height: 300px;
+  }
+}
+
+@-webkit-keyframes strikeOutDiag {
+  0%{
+    width: 1px;
+  }
+  100%{
+    width: 370px;
+  }
+}
+
+@keyframes strikeOutDiag {
+  0%{
+    width: 1px;
+  }
+  100%{
+    width: 370px;
+  }
+}
+
+
+/*//////////////////////////////////////*/
+/*this has two sections (first and second child) for both spans as they need to be applied seperately due to different rotations*/
+/*start of cross icon*/
+#crossIcon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /*background-color: black;*/
+}
+
+/*first span*/
+#crossIcon span:nth-child(1) {
+  display: block;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 48px;
+  height: 9px;
+  width: 70px;
+  background: #545454;
+  border-radius: 9px;
+  /*this makes sure that the X will stay an X and not revert back to a line once rotation has finished*/
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: .8s ease-in-out;
+  -moz-transition: .8s ease-in-out;
+  -o-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  /*calling keyframes expand*/
+  -webkit-animation-name: expand;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes expand {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes expand {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+
+/*second span*/
+#crossIcon span:nth-child(2) {
+  display: block;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 48px;
+  height: 9px;
+  width: 70px;
+  background: #545454;
+  border-radius: 9px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: .8s ease-in-out;
+  -moz-transition: .8s ease-in-out;
+  -o-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-animation-name: expandTwo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes expandTwo {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    -o-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes expandTwo {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    -o-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+  }
+}
+/*end of cross icon*/
+/*///////////////////////////////////////*/
+
+
+/*///////////////////////////////////////*/
+/*start of circle icon*/
+.wrap{
+  width: 100px;
+}
+
+.circle{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin-top: 30px;
+  margin-left: 27px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 9px #545454;
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+/*#F2EBD3;*/
+
+@keyframes flash{
+  25% {
+    /*uses box-shadow rather than border due to resizing shifts*/
+    box-shadow: 0 0 0 6px #545454;
+  }
+  50% {
+    box-shadow: 0 0 0 9px #545454;
+  }
+  75% {
+    box-shadow: 0 0 0 6px #545454;
+  }
+  100% {
+    box-shadow: 0 0 0 9px #545454;
+  }
+}
+/*end of circle icon*/
+/*/////////////////////////////////////////*/
+
+
+/*///////////////////////////////////*/
+/*start of pop up*/
+
+/*creates a layer to darken back screen*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+}
+/*activates layer*/
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*pop up window*/
+.popup {
+  margin: 150px auto;
+  padding: 20px;
+  background: #63ABE0;
+  border-radius: 5px;
+  width: 150px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+/*close button for pop up*/
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #545454;
+}
+
+.popup .close:hover {
+  color: #F5F5F5;
+}
+
+/*centers content*/
+.popup .content {
+  text-align: center;
+}
+
+/*center cross in div*/
+.popup #crossIcon {
+  margin-left: 23px;
+}
+
+/*center circle in div*/
+.popup .wrap {
+  margin-left: 25px;
+  margin-top: -11px;
+  margin-bottom: 15px;
+}
+
+/*end of pop up*/
+/*//////////////////////////////////////////*/
+
+/*///////////////////////////////////////*/
+/*shaking icons starts here*/
+#crossIcon:hover {
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-name: shake;
+  animation-duration: 1s;
+}
+
+.wrap:hover {
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-name: shake;
+  animation-duration: 1s;
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-7px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(7px, 0, 0);
+  }
+}
+/*shaking icons ends here*/
+/*///////////////////////////////////////*/

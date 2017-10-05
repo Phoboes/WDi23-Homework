@@ -1,0 +1,398 @@
+///////////////////////////////////
+/// global css starts
+//////////////////////////////////
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  background: #e6ecf0;
+  color: #14171a;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0px;
+}
+
+hr {
+  background-color: #EBEBEB;
+
+
+}
+
+li {
+  margin-top: 14px;
+}
+
+nav {
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid rgba(0,132,180,0.5);
+  -webkit-text-fill-color: #1da1f2;
+  -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// changes colour of input placeholder text
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #383A3B;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #383A3B;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #383A3B;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #383A3B;
+}
+
+///////////////////////////////////
+/// global css ends
+//////////////////////////////////
+
+.container {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 960px;
+}
+
+////////////////////////////////
+/// search bar starts
+////////////////////////////////
+
+.searchBar {
+  padding: 10px 12px;
+  position: fixed;
+  left: 25vw;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 300px;
+  justify-content: center;
+  z-index: 999;
+
+}
+
+.searchButton {
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2;
+  color: #fff;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  outline: none;
+  margin-left: 5px;
+}
+
+.searchButton:hover {
+  background-color: #0084b4;
+}
+
+.searchInput {
+  color: #1B95E0;
+  width: 361px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 8px 16px;
+  background-color: white;
+  line-height: 20px;
+  border: 1px solid rgba(0,132,180,0.5);
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 14px;
+  vertical-align: top;
+  outline: none;
+}
+
+////////////////////////////////
+/// search bar ends
+////////////////////////////////
+
+/////////////////////////////////////////
+/// Globe starts
+/////////////////////////////////////////
+
+.minusplus {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.zoombuttons {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 23px;
+  z-index: 999;
+}
+
+#zoombuttons button {
+  padding: 10px;
+  font-size: 40px;
+  line-height: 20px;
+}
+
+#range {
+  color: white;
+}
+
+#earth_div {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  position: absolute !important;
+  height: 100vh;
+}
+
+#info {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  background-color: none;
+  padding: 20px;
+  top: 730px;
+  margin-left: 20%;
+}
+
+#description {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  padding: 20px;
+  line-height: 24px;
+}
+
+/////////////////////////////////////////
+/// Globe ends
+/////////////////////////////////////////
+
+//////////////////////////////////////
+/// tweetbox starts
+//////////////////////////////////////
+
+@media screen and (max-width: 900px) {
+    .zoombuttons {
+        visibility: hidden;
+    }
+}
+
+input[type=button] {
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2;
+  color: #fff;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  outline: none;
+  margin-left: 5px;
+}
+
+input[type=button]:hover {
+  background-color: #0084b4;
+}
+
+    ///////////////////////////////
+    /// slider range starts
+    ///////////////////////////////
+
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 25%;
+      background: transparent;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-ms-track {
+      width: 100%;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #1da1f2;
+      cursor: pointer;
+      margin-top: -14px;
+    }
+
+    input[type=range]::-moz-range-thumb {
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #1da1f2;
+      cursor: pointer;
+    }
+
+    input[type=range]::-ms-thumb {
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #1da1f2;
+      cursor: pointer;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.3);
+      background: #FFF;
+      border-radius: 1.3px;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #FFF;
+    }
+
+    input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.3);
+      background: #FFF;
+      border-radius: 1.3px;
+    }
+
+    input[type=range]::-ms-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+      background: #FFF;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    }
+    input[type=range]:focus::-ms-fill-lower {
+      background: #FFF;
+    }
+    input[type=range]::-ms-fill-upper {
+      background: #FFF;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    }
+    input[type=range]:focus::-ms-fill-upper {
+      background: #FFF;
+    }
+
+    ///////////////////////////////
+    /// slider range ends
+    ///////////////////////////////
+
+.line{
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.refreshButton {
+  padding: 0;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  color: #1B95E0;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: box-shadow .15s ease-in-out;
+}
+
+.tweetBoxHead {
+  font-size: 18px;
+  font-weight: bold;
+  color: #14171a;
+  display: inline-block;
+  line-height: 0px;
+  // text-align: left;
+}
+
+.tweetsList {
+  overflow: scroll;
+  max-width: 240px;
+  max-height: 450px;
+}
+
+#slidecontainer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  text-align: center;
+  bottom: 10px;
+  position: fixed;
+  z-index: 999;
+}
+
+#tweetbox {
+  max-height: 500px;
+  max-width: 250px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+#tweetbox #username {
+  color: #1B95E0;
+  font-weight: bold;
+}
+
+//////////////////////////////////////
+/// tweetbox ends
+//////////////////////////////////////
