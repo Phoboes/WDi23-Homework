@@ -45,11 +45,11 @@ let subwaySystem = {                                     //create an object to b
   let stops = [];                                         // stops counts
 
 
-var lineInElm = document.getElementById('line-in');
-var stopInElm = document.getElementById('stop-in');
-var lineOutElm = document.getElementById('line-out');
-var stopOutElm = document.getElementById('stop-out');
-var submit = document.getElementById('megaAwesomeSubmit');
+let lineInElm = document.getElementById('line-in');
+let stopInElm = document.getElementById('stop-in');
+let lineOutElm = document.getElementById('line-out');
+let stopOutElm = document.getElementById('stop-out');
+let submit = document.getElementById('megaAwesomeSubmit');
 
 lineInElm.addEventListener('change', function(e){
   let lineIn = lineInElm.options[lineInElm.selectedIndex].value;
@@ -87,13 +87,13 @@ const singleTrip = function (line, stopIn, stopOut){
   let stopOutPosition = subwaySystem[line].indexOf(stopOut);
   let direction = stopOutPosition - stopInPosition;            // If it is negative, we should go left
   if (direction >0){
-    for (var i = stopInPosition+1; i < stopOutPosition+1; i++) { //check all positions from in and out (+1 so it doesnt count the current one and stop out plus 1 as well so it counts the total correctly)
+    for (let i = stopInPosition+1; i < stopOutPosition+1; i++) { //check all positions from in and out (+1 so it doesnt count the current one and stop out plus 1 as well so it counts the total correctly)
       myTrip = myTrip + " "+ (subwaySystem[line][i]) + ", ";                   //add each line to the trip
       stops.push (totalStops++);              //adds the total stops to our trip
 
     }
   }else {
-    for (var i = stopInPosition-1; i > stopOutPosition-1; i--) { // this will do the reverse stops and decrement
+    for (let i = stopInPosition-1; i > stopOutPosition-1; i--) { // this will do the reverse stops and decrement
     myTrip = myTrip + " "+ (subwaySystem[line][i]) + ", ";
     stops.push (totalStops++);
     }
@@ -112,7 +112,7 @@ const fullTrip = function (lineIn, stopIn, lineOut, stopOut) { //this will take 
   }
 
   let message = document.querySelector(".success-message");
-  message.innerHTML = "<h2>"+myTrip+"</h2>" + "<p>"+ totalStops + " stops in total.</p>" ;
+  message.innerHTML = "<p>"+myTrip+"</p>" + "<p>"+ totalStops + " stops in total.</p>" ;
   console.log(myTrip);
   console.log(totalStops + " stops in total.");
 }; //fullTrip
