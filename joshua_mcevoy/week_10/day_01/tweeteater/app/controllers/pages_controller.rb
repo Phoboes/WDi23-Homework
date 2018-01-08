@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    
+
   end
 
   def show
@@ -10,8 +10,6 @@ class PagesController < ApplicationController
 
   def home
     @tweets = Tweet.all
-
-
   end
 
 end
