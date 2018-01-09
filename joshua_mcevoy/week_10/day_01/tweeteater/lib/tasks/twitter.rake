@@ -31,6 +31,9 @@ namespace :twitter do
       # puts tweet.text
       Tweet.create :content => tweet.text
 
+      # this will create the tweet but will also create the association through the user ID. 
+      # user.tweet.create :content => tweet.text
+
 
   #     @created_at = tweet.created_at.beginning_of_minute()
   #     @text = tweet.text
